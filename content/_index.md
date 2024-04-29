@@ -1,11 +1,11 @@
 ---
-title : "Start with Amazon VPC and AWS VPN Site-to-Site"
+title : "Build a Complete serverless Chat Website"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
 
-# Start with Amazon VPC and AWS VPN Site-to-Site
+# Build a Complete serverless Chat Website
 
 #### Overview
 

@@ -11,7 +11,7 @@ home = [ "HTML", "RSS", "JSON"]
   # Git hub repo link
   editURL = ""
   description = ""
-  author = "journeyoftheaverageguy@gmail.com"
+  author = "hoangguruu@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
