@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.4">
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới thiệu :: AWS System Manager</title>
+    <title>Giới thiệu :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1709096266" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709096266" rel="stylesheet">
-    <link href="/css/hybrid.css?1709096266" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709096266" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709096266" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709096266" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709096266" rel="stylesheet">
-    <link href="/css/theme.css?1709096266" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709096266" rel="stylesheet">
+    <link href="/css/nucleus.css?1708337814" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1708337814" rel="stylesheet">
+    <link href="/css/hybrid.css?1708337814" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1708337814" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1708337814" rel="stylesheet">
+    <link href="/css/auto-complete.css?1708337814" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1708337814" rel="stylesheet">
+    <link href="/css/theme.css?1708337814" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1708337814" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709096266" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1708337814" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709096266"></script>
+    <script src="/js/jquery-3.3.1.min.js?1708337814"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709096266"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709096266"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1708337814"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1708337814"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709096266"></script>
+<script type="text/javascript" src="/js/search.js?1708337814"></script>
 
     
   </div>
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -94,6 +94,130 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduce/1.1-subnets/" title="Subnets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduce/1.1-subnets/">
+           <b> 1.1 </b> Subnets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduce/1.2-routetable/" title="Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduce/1.2-routetable/">
+           <b> 1.2 </b> Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduce/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduce/1.3-internetgateway/">
+           <b> 1.3 </b> Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-introduce/1.4-natgateway/" title="NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-introduce/1.4-natgateway/">
+           <b> 1.4 </b> NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -108,13 +232,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/2-firewallinvpc/" title="Tường lửa trong VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/">
-           <b> 2. </b> Các bước chuẩn bị
+      <a href="/vi/2-firewallinvpc/">
+           <b> 2. </b> Tường lửa trong VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +263,104 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/" title="Chuẩn bị VPC và EC2" class="dd-item 
+    <li data-nav-id="/vi/2-firewallinvpc/2.1-securitygroup/" title="Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Chuẩn bị VPC và EC2
+      <a href="/vi/2-firewallinvpc/2.1-securitygroup/">
+           <b> 2.1 </b> Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-firewallinvpc/2.2-networkacls/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-firewallinvpc/2.2-networkacls/">
+           <b> 2.2 </b> Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-firewallinvpc/2.3-vpc-resource-map/" title="VPC Resource Map" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-firewallinvpc/2.3-vpc-resource-map/">
+           <b> 2.3 </b> VPC Resource Map
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-prerequiste/">
+           <b> 3. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -170,13 +385,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Tạo VPC " class="dd-item 
+    <li data-nav-id="/vi/3-prerequiste/3.1-createvpc/" title="Tạo VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
-           <b> 2.1.1 </b> Tạo VPC 
+      <a href="/vi/3-prerequiste/3.1-createvpc/">
+           <b> 3.1 </b> Tạo VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -198,13 +413,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Tạo Public subnet" class="dd-item 
+    <li data-nav-id="/vi/3-prerequiste/3.2-createsubnet/" title="Tạo Subnet" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
-           <b> 2.1.2 </b> Tạo Public subnet
+      <a href="/vi/3-prerequiste/3.2-createsubnet/">
+           <b> 3.2 </b> Tạo Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -226,13 +441,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Tạo Private subnet" class="dd-item 
+    <li data-nav-id="/vi/3-prerequiste/3.3-createigw/" title="Tạo Internet Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
-           <b> 2.1.3 </b> Tạo Private subnet
+      <a href="/vi/3-prerequiste/3.3-createigw/">
+           <b> 3.3 </b> Tạo Internet Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -254,13 +469,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Tạo các security group" class="dd-item 
+    <li data-nav-id="/vi/3-prerequiste/3.4-cretaeroutetable/" title="Tạo Route Table" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
-           <b> 2.1.4 </b> Tạo các security group
+      <a href="/vi/3-prerequiste/3.4-cretaeroutetable/">
+           <b> 3.4 </b> Tạo Route Table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -282,13 +497,79 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
+    <li data-nav-id="/vi/3-prerequiste/3.5-createsecuritygroup/" title="Tạo Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Tạo Public Linux EC2
+      <a href="/vi/3-prerequiste/3.5-createsecuritygroup/">
+           <b> 3.5 </b> Tạo Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/" title="Tạo máy chủ EC2 " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/">
+           <b> 4. </b> Tạo máy chủ EC2 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/4.1-createec2/" title="Tạo máy chủ EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/4.1-createec2/">
+           <b> 4.1 </b> Tạo máy chủ EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,13 +591,222 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
+    <li data-nav-id="/vi/4-createec2server/4.2-connectec2/" title="Kiểm tra kết nối" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Tạo Private Windows EC2
+      <a href="/vi/4-createec2server/4.2-connectec2/">
+           <b> 4.2 </b> Kiểm tra kết nối
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/4.3-natgateway/" title="Tạo NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/4.3-natgateway/">
+           <b> 4.3 </b> Tạo NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/4.4.-createreachabilityanalyzer/" title="Sử dụng Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Sử dụng Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-createec2server/4.5-eicendpoint/" title="Tạo EC2 Instance Connect Endpoint (Optional)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-createec2server/4.5-eicendpoint/">
+           <b> 4.5 </b> Tạo EC2 Instance Connect Endpoint (Optional)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-vpnsitetosite/" title="Cấu hình Site to Site VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-vpnsitetosite/">
+           <b> 5. </b> Cấu hình Site to Site VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-vpnsitetosite/5.1-createvpnenv/" title="Tạo môi trường VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-vpnsitetosite/5.1-createvpnenv/">
+           <b> 5.1 </b> Tạo môi trường VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-vpnsitetosite/5.1-createvpnenv/5.1.1-createvpnvpc/" title="Tạo VPC cho VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-vpnsitetosite/5.1-createvpnenv/5.1.1-createvpnvpc/">
+           <b> 5.1.1 </b> Tạo VPC cho VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Tạo EC2 Instance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
+           <b> 5.1.2 </b> Tạo EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -347,48 +837,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/" title="Cấu hình kết nối VPN" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Tạo IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/" title="Tạo kết nối đến máy chủ EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/">
-           <b> 3. </b> Tạo kết nối đến máy chủ EC2
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/">
+           <b> 5.2 </b> Cấu hình kết nối VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -413,13 +868,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.1-public-instance/" title="Kết nối đến máy chủ Public" class="dd-item 
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.1-createvpgw/" title="Tạo Virtual Private Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.1-public-instance/">
-           <b> 3.1. </b> Kết nối đến máy chủ Public
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.1-createvpgw/">
+           <b> 5.2.1 </b> Tạo Virtual Private Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,44 +896,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.2-createcustomergw/" title="Tạo Customer Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/">
-           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Kích hoạt DNS hostnames" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
-           <b> 3.2.1 </b> Kích hoạt DNS hostnames
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.2-createcustomergw/">
+           <b> 5.2.2 </b> Tạo Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -500,44 +924,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Tạo VPC Endpoint" class="dd-item 
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.3-createvpnconnection/" title="Tạo kết nối VPN" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
-           <b> 3.2.2 </b> Tạo VPC Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Tạo Endpoint ssm" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
-           <b> 3.2.2.1 </b> Tạo Endpoint ssm
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.3-createvpnconnection/">
+           <b> 5.2.3 </b> Tạo kết nối VPN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -559,13 +952,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Tạo Endpoint ssmmessages" class="dd-item 
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/" title="Cấu hình Customer Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
-           <b> 3.2.2.2 </b> Tạo Endpoint ssmmessages
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/">
+           <b> 5.2.4 </b> Cấu hình Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -587,50 +980,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Tạo Endpoint ec2messages" class="dd-item 
+    <li data-nav-id="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Tùy chỉnh AWS VPN Tunnel" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
-           <b> 3.2.2.3 </b> Tạo Endpoint ec2messages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Kết nối EC2 Private" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
-           <b> 3.2.3 </b> Kết nối EC2 Private
+      <a href="/vi/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Tùy chỉnh AWS VPN Tunnel
           
             <i class="fas fa-check read-icon"></i>
           
@@ -668,189 +1024,13 @@
  
   
     
-    <li data-nav-id="/vi/4-s3log/" title="Quản lý session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/">
-           <b> 4. </b> Quản lý session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.1-updateiamrole/">
-           <b> 4.1 </b> Cập nhật IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Tạo S3 Bucket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.3-creategwes3/">
-           <b> 4.3 </b> Tạo S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.4-configsessionlogs/">
-           <b> 4.4 </b> Theo dõi session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-portfwd/" title="Port Forwarding" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-portfwd/">
-           <b> 5. </b> Port Forwarding
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-cleanup/">
-          <b>6. </b>Dọn dẹp tài nguyên  
+           <b> 6. </b> Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
@@ -872,7 +1052,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
               </li>
           
         </ul>
@@ -897,7 +1081,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/1-introduce/">English</option>
+                      <option id="en" value="/1-introduce/">English</option>
                     
                   
               
@@ -911,7 +1095,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/1-introduce/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/1-introduce/" selected>Tiếng Việt</option>
                     
                   
               
@@ -949,17 +1133,13 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-01-2022</font></i>
+        <i><font color=orange>26-11-2023</font></i>
     </left>
     <left>
         <br>
         <br>
             <b> Team </b> <br>
-           
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
-                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
-               
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
         </i>
         </left>
 
@@ -999,7 +1179,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > Giới thiệu
+            <a href='/vi/'>Bắt đầu với Amazon VPC và AWS VPN Site to Site</a> > Giới thiệu
           
         
           
@@ -1010,7 +1190,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1034,20 +1222,19 @@
 
 
 
-	<p><strong>Session Manager</strong> là một chức năng nằm trong dịch vụ System Manager của AWS, Session Manager cung cấp khả năng quản lý các máy chủ một cách an toàn mà <strong>không cần mở port SSH, không cần Bastion Host hoặc quản lý SSH key</strong>.
-Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công ty yêu cầu quyền truy cập có kiểm soát, đảm bảo việc bảo mật nghiêm ngặt và ghi log truy việc truy cập trong khi vẫn cung cấp cho người dùng cuối quyền truy cập đa nền tảng.</p>
-<p>Với việc sử dụng Session Manager, bạn sẽ có được những ưu điểm sau:</p>
+	<h4 id="giới-thiệu-amazon-vpc">Giới thiệu Amazon VPC</h4>
+<p><strong>Amazon Virtual Private Cloud (Amazon VPC)</strong> là <strong>“Đám mây Riêng tư Ảo”</strong> là một mạng ảo tùy chỉnh nằm bên trong <strong>AWS Cloud</strong> và tách biệt với toàn bộ thế giới bên ngoài. Khái niệm này tương tự như việc thiết kế và triển khai một mạng độc lập riêng biệt hoạt động trong một trung tâm dữ liệu on-premise, loại hình vẫn còn rất phổ biến hiện nay tại nhiều nơi trên thế giới.</p>
+<p>Bên trong VPC tùy chỉnh đó, bạn có toàn quyền kiểm kiểm soát môi trường mạng ảo của mình, nghĩa là vừa có khả năng khởi tạo và chạy các tài nguyên AWS, vừa có thể lựa chọn phạm vi địa chỉ IP, tạo các mạng con và cấu hình các bảng định tuyến và cổng kết nối mạng. Bạn có thể sử dụng cả IPv4 và IPv6 để truy cập an toàn và dễ dàng vào tài nguyên và ứng dụng trong VPC.</p>
+<p><strong>Region</strong> là khái niệm mô tả nhiều cụm trung tâm dữ liệu cực lớn của AWS đặt tại một vùng lãnh thổ nhất định. Trong một region, ta có thể tạo ra nhiều VPC và mỗi VPC được phân biệt nhau bởi những dải không gian địa chỉ IP khác nhau. Ta chỉ định phạm vi địa chỉ IPv4 bằng cách lựa chọn một <strong>Classless Inter-Domain Routing (CIDR)</strong>, chẳng hạn như <strong>10.0.0.0/16</strong>. Phạm vi địa chỉ của Amazon VPC không thể thay đổi sau khi nó đã được tạo. Phạm vi địa chỉ Amazon VPC có thể lớn bằng /16 (tức 65536 địa chỉ khả dụng) hoặc nhỏ bằng /28 (tức 16 địa chỉ khả dụng) và chúng không được phép trùng với bất kỳ mạng nào khác mà chúng sẽ được kết nối tới.</p>
+<p>Dịch vụ Amazon VPC được ra mắt sau dịch vụ Amazon EC2, vì vậy mà có thời điểm AWS cung cấp hai nền tảng mạng khác nhau đó là EC2-Classic và EC2-VPC. EC2-Classic là nền tảng mạng đầu tiên, trong đó tất cả Amazon EC2 được tạo ra đều nằm trong một mạng phẳng duy nhất, chia sẻ kết nối giữa các khách hàng của AWS. Cho tới tháng 12 năm 2013, AWS chỉ còn hỗ trợ EC2-VPC với VPC mặc định được tạo ra ở mỗi Region cùng một subnet mặc định với CIDR block có giá trị là 172.31.0.0/16.</p>
+<h4 id="nội-dung">Nội dung</h4>
 <ul>
-<li>Không cần phải mở cổng 22 cho giao thức SSH.</li>
-<li>Có thể cấu hình để kết nối không cần đi ra ngoài internet.</li>
-<li>Không cần quản lý private key của server để kết nối SSH.</li>
-<li>Quản lý tập trung được user bằng việc sử dụng AWS IAM.</li>
-<li>Truy cập tới server một cách dễ dàng và đơn giản bằng một cú click chuột.</li>
-<li>Thời gian truy cập nhanh chóng hơn các phương thức truyền thống như SSH.</li>
-<li>Hỗ trợ nhiều hệ điều hành khác nhau như Linux, Windows, MacOS.</li>
-<li>Log lại được các phiên kết nối và các câu lệnh đã thực thi trong lúc kết nối tới server.</li>
+<li><a href="1.1-subnets/">Subnets</a></li>
+<li><a href="1.2-routetable/">Route Table</a></li>
+<li><a href="1.3-internetgateway/">Internet Gateway</a></li>
+<li><a href="1.4-natgateway/">NAT Gateway</a></li>
 </ul>
-<p>Với những ưu điểm trên, bạn có thể sử dụng Session Manager thay vì sử dụng kỹ thuật Bastion host giúp chúng ta tiết kiệm được thời gian và chi phí khi quản lý server Bastion.</p>
+<p>Bây giờ chúng ta sẽ cùng nhau đi qua các khái niệm cơ bản nhất của VPC nhé.</p>
 
 
 
@@ -1094,25 +1281,6 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1123,52 +1291,8 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1242,87 +1366,6 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1372,28 +1415,6 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1480,6 +1501,53 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1495,6 +1563,223 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
             
         
@@ -1524,10 +1809,10 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/" title="Session Management"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/" title="Bắt đầu với Amazon VPC và AWS VPN Site to Site"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-prerequiste/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-introduce/1.1-subnets/" title="Subnets" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1537,19 +1822,19 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709096266"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709096266"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709096266"></script>
-    <script src="/js/jquery.sticky.js?1709096266"></script>
-    <script src="/js/featherlight.min.js?1709096266"></script>
-    <script src="/js/highlight.pack.js?1709096266"></script>
+    <script src="/js/clipboard.min.js?1708337814"></script>
+    <script src="/js/perfect-scrollbar.min.js?1708337814"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1708337814"></script>
+    <script src="/js/jquery.sticky.js?1708337814"></script>
+    <script src="/js/featherlight.min.js?1708337814"></script>
+    <script src="/js/highlight.pack.js?1708337814"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709096266"></script>
-    <script src="/js/learn.js?1709096266"></script>
-    <script src="/js/hugo-learn.js?1709096266"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1708337814"></script>
+    <script src="/js/learn.js?1708337814"></script>
+    <script src="/js/hugo-learn.js?1708337814"></script>
 
-    <link href="/mermaid/mermaid.css?1709096266" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709096266"></script>
+    <link href="/mermaid/mermaid.css?1708337814" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1708337814"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

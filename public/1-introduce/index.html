@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.4">
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Introduction :: AWS System Manager</title>
+    <title>Introduction :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1709096266" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709096266" rel="stylesheet">
-    <link href="/css/hybrid.css?1709096266" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709096266" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709096266" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709096266" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709096266" rel="stylesheet">
-    <link href="/css/theme.css?1709096266" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709096266" rel="stylesheet">
+    <link href="/css/nucleus.css?1708337813" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1708337813" rel="stylesheet">
+    <link href="/css/hybrid.css?1708337813" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1708337813" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1708337813" rel="stylesheet">
+    <link href="/css/auto-complete.css?1708337813" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1708337813" rel="stylesheet">
+    <link href="/css/theme.css?1708337813" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1708337813" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709096266" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1708337813" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709096266"></script>
+    <script src="/js/jquery-3.3.1.min.js?1708337813"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709096266"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709096266"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1708337813"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1708337813"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709096266"></script>
+<script type="text/javascript" src="/js/search.js?1708337813"></script>
 
     
   </div>
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -94,6 +94,130 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/1.1-subnets/" title="Subnets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/1.1-subnets/">
+           <b> 1.1 </b> Subnets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/1.2-routetable/" title="Route Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/1.2-routetable/">
+           <b> 1.2 </b> Route Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/1.3-internetgateway/">
+           <b> 1.3 </b> Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/1.4-natgateway/" title="NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/1.4-natgateway/">
+           <b> 1.4 </b> NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -108,13 +232,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-firewallinvpc/" title="Firewall in VPC" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation 
+      <a href="/2-firewallinvpc/">
+           <b> 2. </b> Firewall in VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +263,104 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing VPC and EC2" class="dd-item 
+    <li data-nav-id="/2-firewallinvpc/2.1-securitygroup/" title="Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Preparing VPC and EC2
+      <a href="/2-firewallinvpc/2.1-securitygroup/">
+           <b> 2.1 </b> Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-firewallinvpc/2.2-networkacls/" title="Network ACLs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-firewallinvpc/2.2-networkacls/">
+           <b> 2.2 </b> Network ACLs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-firewallinvpc/2.3-vpc-resource-map/" title="VPC Resource Map" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-firewallinvpc/2.3-vpc-resource-map/">
+           <b> 2.3 </b> VPC Resource Map
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-prerequiste/" title="Preparation steps" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-prerequiste/">
+           <b> 3. </b> Preparation steps
           
             <i class="fas fa-check read-icon"></i>
           
@@ -170,13 +385,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Create VPC" class="dd-item 
+    <li data-nav-id="/3-prerequiste/3.1-createvpc/" title="Create VPC" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
-           <b> 2.1.1 </b> Create VPC
+      <a href="/3-prerequiste/3.1-createvpc/">
+           <b> 3.1 </b> Create VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -198,13 +413,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet" class="dd-item 
+    <li data-nav-id="/3-prerequiste/3.2-createsubnet/" title="Create Subnet" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
-           <b> 2.1.2 </b> Create Public Subnet
+      <a href="/3-prerequiste/3.2-createsubnet/">
+           <b> 3.2 </b> Create Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -226,13 +441,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Create Private Subnet" class="dd-item 
+    <li data-nav-id="/3-prerequiste/3.3-createigw/" title="Create Internet Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
-           <b> 2.1.3 </b> Create Private Subnet
+      <a href="/3-prerequiste/3.3-createigw/">
+           <b> 3.3 </b> Create Internet Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -254,13 +469,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" class="dd-item 
+    <li data-nav-id="/3-prerequiste/3.4-cretaeroutetable/" title="Create Route Table" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
-           <b> 2.1.4 </b> Create security groups
+      <a href="/3-prerequiste/3.4-cretaeroutetable/">
+           <b> 3.4 </b> Create Route Table
           
             <i class="fas fa-check read-icon"></i>
           
@@ -282,13 +497,79 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create Public instance" class="dd-item 
+    <li data-nav-id="/3-prerequiste/3.5-createsecuritygroup/" title="Create Security Group" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Create Public instance
+      <a href="/3-prerequiste/3.5-createsecuritygroup/">
+           <b> 3.5 </b> Create Security Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/" title="Create EC2 Server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/">
+           <b> 4. </b> Create EC2 Server
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.1-createec2/" title="Create EC2 Server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.1-createec2/">
+           <b> 4.1 </b> Create EC2 Server
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,13 +591,222 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Create Private Instance" class="dd-item 
+    <li data-nav-id="/4-createec2server/4.2-connectec2/" title="Test Connection" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Create Private Instance
+      <a href="/4-createec2server/4.2-connectec2/">
+           <b> 4.2 </b> Test Connection
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.3-natgateway/" title="Create NAT Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.3-natgateway/">
+           <b> 4.3 </b> Create NAT Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.4.-createreachabilityanalyzer/" title="Using Reachability Analyzer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.4.-createreachabilityanalyzer/">
+           <b> 4.4 </b> Using Reachability Analyzer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createec2server/4.5-eicendpoint/" title="Create EC2 Instance Connect Endpoint (Optional)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-createec2server/4.5-eicendpoint/">
+           <b> 4.5 </b> Create EC2 Instance Connect Endpoint (Optional)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/" title="Setting Up Site-to-Site VPN Connection in AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/">
+           <b> 5. </b> Setting Up Site-to-Site VPN Connection in AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/" title="Create a VPN environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.1-createvpnenv/">
+           <b> 5.1 </b> Create a VPN environment
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.1-createvpnvpc/" title="Create VPC for VPN" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.1-createvpnvpc/">
+           <b> 5.1.1 </b> Create VPC for VPN
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/" title="Create EC2 as a Customer Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-vpnsitetosite/5.1-createvpnenv/5.1.2-createec2vpn/">
+           <b> 5.1.2 </b> Create EC2 as a Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -347,48 +837,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/" title="Configure VPN Connection" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Create IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/" title="Connect to EC2 servers" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/">
-           <b> 3. </b> Connect to EC2 servers
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/">
+           <b> 5.2 </b> Configure VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -413,13 +868,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/3.1-public-instance/" title="Connect to Public Instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.1-createvpgw/" title="Create Virtual Private Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/3-accessibilitytoinstances/3.1-public-instance/">
-           <b> 3.1. </b> Connect to Public Instance
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.1-createvpgw/">
+           <b> 5.2.1 </b> Create Virtual Private Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,44 +896,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/" title="Connect to Private instance" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.2-createcustomergw/" title="Create Customer Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/">
-           <b> 3.2. </b> Connect to Private instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Enable DNS hostnames" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
-           <b> 3.2.1 </b> Enable DNS hostnames
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.2-createcustomergw/">
+           <b> 5.2.2 </b> Create Customer Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -500,44 +924,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Create VPC Endpoint" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.3-createvpnconnection/" title="Create VPN Connection" class="dd-item 
         
         
         
         ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
-           <b> 3.2.2 </b> Create VPC Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Create Endpoint ssm" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
-           <b> 3.2.2.1 </b> Create Endpoint ssm
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.3-createvpnconnection/">
+           <b> 5.2.3 </b> Create VPN Connection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -559,13 +952,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Create Endpoint ssmmessages" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/" title="Customer Gateway Configuration" class="dd-item 
         
         
         
         ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
-           <b> 3.2.2.2 </b> Create Endpoint ssmmessages
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.4-configurecustomergw/">
+           <b> 5.2.4 </b> Customer Gateway Configuration
           
             <i class="fas fa-check read-icon"></i>
           
@@ -587,50 +980,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Create Endpoint ec2messages" class="dd-item 
+    <li data-nav-id="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/" title="Modify AWS VPN Tunnel" class="dd-item 
         
         
         
         ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
-           <b> 3.2.2.3 </b> Create Endpoint ec2messages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Connect to instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
-           <b> 3.2.3 </b> Connect to instance
+      <a href="/5-vpnsitetosite/5.2-vpnsitetosite/5.2.5-modifyvpn/">
+           <b> 5.2.5 </b> Modify AWS VPN Tunnel
           
             <i class="fas fa-check read-icon"></i>
           
@@ -654,182 +1010,6 @@
           
         
         </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/" title="Manage session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/">
-           <b> 4. </b> Manage session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.1-updateiamrole/" title="Update IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.1-updateiamrole/">
-           <b> 4.1 </b> Update IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Create S3 Bucket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Create S3 Bucket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.3-creategwes3/" title="Create S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.3-creategwes3/">
-           <b> 4.3 </b> Create S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.4-configsessionlogs/" title="Monitor session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.4-configsessionlogs/">
-           <b> 4.4 </b> Monitor session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-portfwd/" title="Port Forwarding" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-portfwd/">
-           <b> 5. </b> Port Forwarding
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
               
     </li>
   
@@ -850,7 +1030,7 @@
         
         ">
       <a href="/6-cleanup/">
-          <b>6. </b>Clean up resources
+           <b> 6. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -872,7 +1052,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -897,7 +1081,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/1-introduce/" selected>English</option>
+                      <option id="en" value="/1-introduce/" selected>English</option>
                     
                   
               
@@ -911,7 +1095,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/1-introduce/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/1-introduce/">Tiếng Việt</option>
                     
                   
               
@@ -949,17 +1133,13 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>30-01-2022</font></i>
+        <i><font color=orange>26-11-2023</font></i>
     </left>
     <left>
         <br>
         <br>
             <b> Team </b> <br>
-           
-            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
-                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
-                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
-               
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
         </i>
         </left>
 
@@ -999,7 +1179,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Introduction
+            <a href='/'>Start with Amazon VPC and AWS VPN Site-to-Site</a> > Introduction
           
         
           
@@ -1010,7 +1190,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-amazon-vpc">Introduction to Amazon VPC</a></li>
+    <li><a href="#contents">Contents</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1034,19 +1219,19 @@
 
 
 
-	<p><strong>Session Manager</strong> is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.</p>
-<p>By using Session Manager, you get the following advantages that traditional methods do not have:</p>
+	<h2 id="introduction-to-amazon-vpc">Introduction to Amazon VPC</h2>
+<p>Amazon Virtual Private Cloud (Amazon VPC) is a <strong>Virtual Private Cloud</strong>—a customized virtual network hosted within the AWS Cloud and isolated from the external world. This concept resembles the design and implementation of a distinct standalone network environment in an on-premise data center, a practice still widely employed across many countries.</p>
+<p>Within this dedicated VPC, users possess comprehensive control over their virtual network environment. This control encompasses the initiation and operation of AWS resources, the ability to choose IP address ranges, establish network subnets, and configure routing tables and network gateways. Secure and convenient resource and application access within the VPC is facilitated through both IPv4 and IPv6 protocols.</p>
+<p>The term &ldquo;Region&rdquo; refers to vast clusters of AWS data centers situated within specific territories. Multiple VPCs can be established within a single region, with each VPC differentiated by its unique IP address space range. The IPv4 address range is defined by selecting a Classless Inter-Domain Routing (CIDR) notation, such as 10.0.0.0/16. Once created, the Amazon VPC address range remains immutable. These ranges can span from as extensive as /16 (equivalent to 65536 available addresses) to as limited as /28 (allowing for 16 available addresses). Crucially, these ranges must not overlap with any other connected networks.</p>
+<p>The Amazon VPC service was introduced subsequent to the launch of Amazon EC2. Consequently, AWS provided two distinct networking platforms for a period: EC2-Classic and EC2-VPC. EC2-Classic established a single flat network where all Amazon EC2 instances operated, enabling shared connectivity among AWS clients. However, as of December 2013, AWS exclusively supports EC2-VPC. Each region includes a default VPC along with a default subnet featuring a CIDR block of 172.31.0.0/16.</p>
+<h2 id="contents">Contents</h2>
 <ul>
-<li>No need to open port 22 for SSH protocol, so it is more secure.</li>
-<li>Can be configured so that the connection does not need to go outside the internet, so it is more secure.</li>
-<li>No need to manage the server&rsquo;s private key to connect to SSH.</li>
-<li>Centralized management of users using AWS IAM.</li>
-<li>Access to the server easily and simply with one click.</li>
-<li>Faster access time than traditional methods like SSH</li>
-<li>Support many different operating systems such as Linux, Windows, MacOS</li>
-<li>Log the connection sessions and commands executed while connecting to the server.</li>
+<li><a href="1.1-subnets/">Subnets</a></li>
+<li><a href="1.2-routetable/">Route Table</a></li>
+<li><a href="1.3-internetgateway/">Internet Gateway</a></li>
+<li><a href="1.4-natgateway/">NAT Gateway</a></li>
 </ul>
-<p>With the above advantages, you can use Session Manager instead of using Bastion host technique to save us time and money when managing Bastion server.</p>
+<p>In the following sections, we will delve into the fundamental concepts of VPC.</p>
 
 
 
@@ -1093,25 +1278,6 @@
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1122,52 +1288,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1241,87 +1363,6 @@
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1371,28 +1412,6 @@
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1479,6 +1498,53 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1494,6 +1560,223 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
                     
             
         
@@ -1523,10 +1806,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Session Management"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/" title="Start with Amazon VPC and AWS VPN Site-to-Site"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/" title="Preparation " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduce/1.1-subnets/" title="Subnets" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1536,19 +1819,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709096266"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709096266"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709096266"></script>
-    <script src="/js/jquery.sticky.js?1709096266"></script>
-    <script src="/js/featherlight.min.js?1709096266"></script>
-    <script src="/js/highlight.pack.js?1709096266"></script>
+    <script src="/js/clipboard.min.js?1708337814"></script>
+    <script src="/js/perfect-scrollbar.min.js?1708337814"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1708337814"></script>
+    <script src="/js/jquery.sticky.js?1708337814"></script>
+    <script src="/js/featherlight.min.js?1708337814"></script>
+    <script src="/js/highlight.pack.js?1708337814"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709096266"></script>
-    <script src="/js/learn.js?1709096266"></script>
-    <script src="/js/hugo-learn.js?1709096266"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1708337814"></script>
+    <script src="/js/learn.js?1708337814"></script>
+    <script src="/js/hugo-learn.js?1708337814"></script>
 
-    <link href="/mermaid/mermaid.css?1709096266" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709096266"></script>
+    <link href="/mermaid/mermaid.css?1708337814" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1708337814"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

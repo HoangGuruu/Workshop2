@@ -1,83 +1,90 @@
-+++
-title = "Clean up resources"
-date = 2022
-weight = 6
-chapter = false
-pre = "<b>6. </b>"
-+++
+---
+title : "Clean up resources"
+date : "`r Sys.Date()`"
+weight : 6
+chapter : false
+pre : " <b> 6. </b> "
+---
+## Clean up resources
 
-We will take the following steps to delete the resources we created in this exercise.
+We will proceed to delete the resources in the following order:
 
-#### Delete EC2 instance
+### Terminate EC2 Instances
 
-1. Go to [EC2 service management console](https://console.aws.amazon.com/ec2/v2/home)
-   + Click **Instances**.
-   + Select both **Public Linux Instance** and **Private Windows Instance** instances.
-   + Click **Instance state**.
-   + Click **Terminate instance**, then click **Terminate** to confirm.
+1. Terminate EC2 instance:
+    - Access the Amazon EC2 console at [EC2](https://console.aws.amazon.com/ec2/).
+    - On the left navigation bar, select "Instances."
+    - Select all EC2 instances related to the lab.
+    - Select **Instance state**.
+    - Select **Terminate instance**.
 
-2. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home#/home)
-   + Click **Roles**.
-   + In the search box, enter **SSM**.
-   + Click to select **SSM-Role**.
-   + Click **Delete**, then enter the role name **SSM-Role** and click **Delete** to delete the role.
+   ![Terminate EC2](/images/16/0001.png?featherlight=false&width=90pc)
 
-![Clean](/images/6.clean/001-clean.png)
+2. Confirm termination.
 
-3. Click **Users**.
-   + Click on user **Portfwd**.
-   + Click **Delete**, then enter the user name **Portfwd** and click **Delete** to delete the user.
+   ![Confirm Termination](/images/16/0002.png?featherlight=false&width=90pc)
 
-#### Delete S3 bucket
+### Remove NAT Gateway and Elastic IP Address
 
-1. Access [System Manager - Session Manager service management console](https://console.aws.amazon.com/systems-manager/session-manager).
-   + Click the **Preferences** tab.
-   + Click **Edit**.
-   + Scroll down.
-   + In the section **S3 logging**.
-   + Uncheck **Enable** to disable logging.
-   + Scroll down.
-   + Click **Save**.
+- Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.
+- Visit the Amazon VPC console page at [VPC](https://console.aws.amazon.com/vpc/).
+- On the left navigation bar, click "NAT Gateway."
+- Select NAT Gateway.
+- Click **Action**.
+- Click **Delete NAT Gateway**.
 
-2. Go to [S3 service management console](https://s3.console.aws.amazon.com/s3/home)
-   + Click on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 )
-   + Click **Empty**.
-   + Enter **permanently delete**, then click **Empty** to proceed to delete the object in the bucket.
-   + Click **Exit**.
+   ![Delete NAT Gateway](/images/16/0003.png?featherlight=false&width=90pc)
 
-3. After deleting all objects in the bucket, click **Delete**
+- Type "delete."
+- Click **Delete** to confirm the deletion of NAT Gateway.
 
-![Clean](/images/6.clean/002-clean.png)
+   ![Confirm Deletion](/images/16/0004.png?featherlight=false&width=90pc)
+   ![Confirm Deletion](/images/16/0005.png?featherlight=false&width=90pc)
 
-4. Enter the name of the S3 bucket, then click **Delete bucket** to proceed with deleting the S3 bucket.
+### Delete Elastic IP Address
 
-![Clean](/images/6.clean/003-clean.png)
+- Continue to delete Elastic IP Address.
+- Visit the Amazon VPC console page at [VPC](https://console.aws.amazon.com/vpc/).
+- On the left navigation bar, click "Elastic IP."
+- Select the Elastic IP Address we created.
+- Click **Action**.
+- Click **Release Elastic IP Address**.
+- Click **Release**.
 
-#### Delete VPC Endpoints
+   ![Release Elastic IP](/images/16/0006.png?featherlight=false&width=90pc)
+   ![Release Elastic IP](/images/16/0007.png?featherlight=false&width=90pc)
 
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Endpoints**.
-   + Select the 4 endpoints we created for the lab including **SSM**, **SSMMESSAGES**, **EC2MESSAGES**, **S3GW**.
-   + Click **Actions**.
-   + Click **Delete VPC endpoints**.
+#### Delete the EC2 Instance connection endpoint
+- Access to Endpoint transactions
+- Select Action, select Delete VPC endpoints
+- Enter delete
+![Create VPC](/images/16/00020.png?featherlight=false&width=90pc)
 
-![Clean](/images/6.clean/004-clean.png)
+### Delete in the following order:
 
-2. In the confirm box, enter **delete**.
-   + Click **Delete** to proceed with deleting endpoints.
+- VPN Site to Site connection.
 
-3. Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.
+   ![VPN Site to Site](/images/16/0008.png?featherlight=false&width=90pc)
+   ![VPN Site to Site](/images/16/0009.png?featherlight=false&width=90pc)
 
-![Clean](/images/6.clean/005-clean.png)
+- Virtual Private Gateway.
 
-#### Delete VPC
+   ![Virtual Private Gateway](/images/16/00010.png?featherlight=false&width=90pc)
+   ![Virtual Private Gateway](/images/16/00011.png?featherlight=false&width=90pc)
+   ![Virtual Private Gateway](/images/16/00012.png?featherlight=false&width=90pc)
+   ![Virtual Private Gateway](/images/16/00013.png?featherlight=false&width=90pc)
 
-1. Go to [VPC service management console](https://console.aws.amazon.com/vpc/home)
-   + Click **Your VPCs**.
-   + Click on **Lab VPC**.
-   + Click **Actions**.
-   + Click **Delete VPC**.
+- Customer Gateway.
 
-2. In the confirm box, enter **delete** to confirm, click **Delete** to delete **Lab VPC** and related resources.
+   ![Customer Gateway](/images/16/00014.png?featherlight=false&width=90pc)
+   ![Customer Gateway](/images/16/00015.png?featherlight=false&width=90pc)
 
-![Clean](/images/6.clean/006-clean.png)
+- VPC ASG VPN.
+
+   ![VPC ASG VPN](/images/16/00016.png?featherlight=false&width=90pc)
+   ![VPC ASG VPN](/images/16/00017.png?featherlight=false&width=90pc)
+
+- VPC ASG.
+
+   ![VPC ASG](/images/16/00018.png?featherlight=false&width=90pc)
+   ![VPC ASG](/images/16/00019.png?featherlight=false&width=90pc)
