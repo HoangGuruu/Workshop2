@@ -1,283 +1,269 @@
 [
 {
+	"uri": "//localhost:1313/2-static-s3/2.1-add-data/",
+	"title": "Adding static data to the website",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "//localhost:1313/",
 	"title": "Build a Complete serverless Chat Website",
 	"tags": [],
 	"description": "",
-	"content": "Build a Complete serverless Chat Website Overview In this lab, you will explore the fundamentals of Amazon VPC (Virtual Private Cloud) and AWS VPN (Virtual Private Network) Site-to-Site connections. Gain an understanding of essential concepts and features within Amazon VPC, and practice creating a basic VPC. Additionally, learn how to configure a Site-to-Site VPN to establish a connection between an on-premise environment and an AWS VPC environment.\nContent Introduction to VPC Firewall within VPC Preparation Steps Creating an EC2 Server Configuration of Site-to-Site VPN Resource Cleanup "
+	"content": "Build a Complete serverless Chat Website Overview In this lab, you will\nContent Introduction and Preparation Static Chat Application with S3 Creating an API Use DynamoDB for storage Break up the monolith – Start build Complete App Add Identity to the application Optimization Setting up a CloudFront CDN Clear Resources "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.1-user-pool/",
+	"title": "Create a user pool",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/5-break/5.1-api/",
+	"title": "Create API structure in API Gateway",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/4-dynamodb/4.1-tables/",
+	"title": "Create DynamoDB tables",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/3-api/3.1-policy/",
+	"title": "Creating a policy for the Lambda function",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/1-intro-prepare/",
-	"title": "Introduction",
+	"title": "Introduction and Preparation",
 	"tags": [],
 	"description": "",
 	"content": "Diagram for this project Contents Introduction Setup the website "
 },
 {
-	"uri": "//localhost:1313/2-static-s3/2.1-add-data/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/3-api/3.1-policy/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/4-dynamodb/4.1-tables/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/5-break/5.1-api/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/5-break/5.2-lambda/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.1-user-pool/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.2-users-api/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.3-users-site/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.4-new-conversation/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.5-sign-up/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.6-verify/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.7-login-logout/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.8-authorizer/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
-	"uri": "//localhost:1313/6-identity/6.9-results/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Basic Features of Security Group Allow Rules Only: Only Allow rules can be added; Deny rules cannot be added. Separate Rules for Traffic: Separate rules can be specified for outgoing and incoming traffic. Initial Inbound Rules: A newly created Security group starts with no Inbound rules. Initially, the instance won\u0026rsquo;t allow any traffic in, requiring the addition of an Inbound rule to enable access. Default Outbound Rule: By default, the Security group includes an Outbound rule that permits all traffic to leave the instance. This rule can be modified or replaced with specific Outbound rules to control outgoing traffic originating from the instance. If there\u0026rsquo;s no Outbound rule, no traffic is allowed to exit the instance. Stateful Service: Security groups are stateful services, meaning that if incoming traffic is allowed, outgoing traffic is automatically permitted, and vice versa, regardless of the Outbound rule. Instance Communication: Instances can communicate only if they are associated with a Security group that permits connections, or if a Security group associated with the instance contains a rule allowing traffic. The default Security group has default rules allowing all traffic. Association with Network Interfaces: Security groups are associated with network interfaces. After initialization, you can change the Security group assigned to an instance, which will also update the Security group for the corresponding primary network interface. Security Group Rule A Security group rule is created to grant access to traffic entering or leaving an instance. This access can apply to a specific CIDR or to a Security group in the same VPC, or even to a Security group in another VPC connected by peering.\nComponents of Security Group Rule Inbound Rules: These include the source of the traffic and the destination port or port range. The source can be another security group, an IPv4 or IPv6 CIDR range, or an IPv4/IPv6 address. Outbound Rules: These include the destination of the traffic and the destination port or port range. The destination can be another security group, an IPv4 or IPv6 CIDR range, an IPv4/IPv6 address, or a service identified by a prefix (e.g. igw_xxx) in the prefix ID list (where services are identified by the prefix ID - the name and ID of the available service in the region). Standard Protocols: Each protocol has a standard protocol number associated with it. For instance, SSH is associated with port number 22. "
-},
-{
 	"uri": "//localhost:1313/1-intro-prepare/1.1-intro/",
-	"title": "Subnets",
+	"title": "Introdution",
 	"tags": [],
 	"description": "",
-	"content": "Subnets A subnet is a segment of the IP address range that you use when provisioning your Amazon VPC. It directly provides the active network range to the AWS resources that may run within it, such as Amazon EC2 and Amazon RDS (Amazon Relational Database Service). Subnets are identified through CIDR blocks (e.g., 10.0.1.0/24 and 192.168.0.0/24), and the subnet\u0026rsquo;s CIDRs must be within the VPC\u0026rsquo;s CIDR. The smallest subnet that can be created is /28 (16 IP addresses). AWS reserves the first 4 IP addresses and the last 1 IP address of each subnet for intranet networking purposes. For example, a /28 subnet has 16 available IP addresses, but 5 reserved IPs are used for AWS, leaving 11 usable IP addresses for resources operating within this subnet.\nAn Availability Zone (AZ) is a single or multi-data center located within a Region and identified based on geographical location. Within an AZ, there can be one or more subnets. However, a subnet can only reside in a single AZ and cannot extend to other AZs.\nSubnets are categorized as:\nPublic subnet: This subnet has a route table (discussed later) that directs traffic within the subnet to the VPC\u0026rsquo;s Internet Gateway (IGW) (discussed later). Private subnet: The opposite of a Public subnet, it lacks a route table directing traffic to the VPC\u0026rsquo;s IGW. VPN-only subnet: This subnet has a route table that directs traffic to Amazon VPC\u0026rsquo;s Virtual Private Gateway (VPG) (discussed later). Regardless of the subnet type, the subnet\u0026rsquo;s internal IP address range is always private. This means that it is not possible to directly connect to addresses within this range from outside the Internet.\n"
-},
-{
-	"uri": "//localhost:1313/2-static-s3/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/3-api/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/4-dynamodb/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/5-break/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/6-identity/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/7-optimization-cdn/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/8-clear/",
-	"title": "Firewall in VPC",
-	"tags": [],
-	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nSecurity Groups A Security Group acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It\u0026rsquo;s important to note that Security Groups operate at the Instance layer and not at the Subnet layer.\nNote: Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.\nNetwork ACLs A Network Access Control List (ACL) is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.\nContents Security Groups Network ACLs "
+	"content": "\n"
 },
 {
 	"uri": "//localhost:1313/2-static-s3/2.2-access-data/",
-	"title": "Network ACLs",
+	"title": "Accessing static data from javascript",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Custom Network ACL: You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added. Subnet Association: Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL. Multiple Subnets: A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association. Rule Sequencing: Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766. Allow/Deny Traffic: Network ACLs contain both inbound and outbound rules for allowing or denying traffic. Stateless Service: Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/3-api/3.2-lambda/",
-	"title": "Network ACLs",
+	"title": "Code walkthrough of the first Lambda function",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Custom Network ACL: You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added. Subnet Association: Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL. Multiple Subnets: A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association. Rule Sequencing: Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766. Allow/Deny Traffic: Network ACLs contain both inbound and outbound rules for allowing or denying traffic. Stateless Service: Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.2-sample-data/",
-	"title": "Network ACLs",
+	"title": "Create some sample data in DynamoDB",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Custom Network ACL: You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added. Subnet Association: Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL. Multiple Subnets: A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association. Rule Sequencing: Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766. Allow/Deny Traffic: Network ACLs contain both inbound and outbound rules for allowing or denying traffic. Stateless Service: Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
+	"content": " "
 },
 {
-	"uri": "//localhost:1313/5-break/5.3-export/",
-	"title": "Network ACLs",
+	"uri": "//localhost:1313/5-break/5.2-lambda/",
+	"title": "Lambda functions for reading and writing messages",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs Default Network ACL: After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC. Custom Network ACL: You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added. Subnet Association: Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL. Multiple Subnets: A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association. Rule Sequencing: Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766. Allow/Deny Traffic: Network ACLs contain both inbound and outbound rules for allowing or denying traffic. Stateless Service: Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa. Network ACL Rules You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL\u0026rsquo;s rules automatically apply to its associated subnets.\nComponents of a network ACL rule:\nRule Number: Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it\u0026rsquo;s immediately applied even if it conflicts with higher-numbered rules. Type: Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges. Protocol: Specify the protocol using standard protocol numbers. Port Range: Define the port or port range for traffic (e.g., HTTP is 80). Source: [Inbound Rule] Defines the traffic origin (CIDR range). Destination: [Outbound Rule] Specifies the traffic destination (CIDR range). Allow/Deny: Choose to Allow or Deny the specified traffic. "
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.2-users-api/",
+	"title": "List Users in the API",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/1-intro-prepare/1.2-setup/",
-	"title": "Route Table",
+	"title": "Setup the website",
 	"tags": [],
 	"description": "",
-	"content": "Route Table The Route Table, also referred to as the routing table, is responsible for providing routing instructions within a network and is associated with specific subnets.\nFor instance, in the scenario where a Virtual Private Cloud (VPC) is established with the network layer 10.10.0.0/16, along with two subnets, 10.10.1.0/24 and 10.10.2.0/24, each default subnet will be allocated a default route table.\nInside the route table, there will exist a route entry with the following details:\nDestination: 10.10.0.0/16 Target: local This particular route entry signifies that resources created within the same VPC can communicate with each other.\n"
+	"content": " "
 },
 {
-	"uri": "//localhost:1313/1-intro-prepare/1.3-internetgateway/",
-	"title": "Internet Gateway",
+	"uri": "//localhost:1313/2-static-s3/",
+	"title": "Static Chat Application with S3",
 	"tags": [],
 	"description": "",
-	"content": "Internet Gateway The Internet Gateway (IGW) is a crucial component of Amazon VPC that facilitates communication between resources within the VPC, specifically EC2 instances, and the Internet. The IGW exhibits robust horizontal scalability, along with high levels of redundancy and availability. It operates as a designated target within the Amazon VPC\u0026rsquo;s routing table, playing a vital role in directing traffic from EC2 instances to the external Internet. This process involves translating the network address of the EC2 instance into its corresponding Public IP address.\nMore precisely, the EC2 instances located within the VPC are only aware of their assigned Private IP addresses. However, when there is a need to transmit traffic from these EC2 instances to the Internet, the IGW intervenes by translating the originating Private IP address into the Public IP address (or Elastic IP addresses, as discussed later) assigned to the respective EC2 instance. This translation is upheld through a one-to-one mapping, which persists until the Public IP address is released.\nConversely, when the EC2 instances receive incoming traffic from the Internet, the IGW undertakes the task of translating the target address (Public IP address) into the corresponding Private IP address of the EC2 instance. Subsequently, the IGW forwards this traffic into the Amazon VPC.\n"
+	"content": "Contents Adding static data to the website Accessing static data from javascript "
+},
+{
+	"uri": "//localhost:1313/3-api/",
+	"title": "Creating an API",
+	"tags": [],
+	"description": "",
+	"content": "Contents Creating a policy for the Lambda function Code walkthrough of the first Lambda function Running the lambda function with test data Adding an API Gateway trigger to the function Understand and Setup CORS Calling the API from the website "
+},
+{
+	"uri": "//localhost:1313/5-break/5.3-export/",
+	"title": "Exporting a JavaScript client and Swagger",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.3-users-site/",
+	"title": "List Users on the site",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/3-api/3.3-lambda-test/",
-	"title": "VPC Resource Map",
+	"title": "Running the lambda function with test data",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
-},
-{
-	"uri": "//localhost:1313/3-api/3.4-lambda-api/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
-},
-{
-	"uri": "//localhost:1313/3-api/3.5-cors/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
-},
-{
-	"uri": "//localhost:1313/3-api/3.6-call-api/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.3-update-policy/",
-	"title": "VPC Resource Map",
+	"title": "Update Lambda policy to access DynamoDB tables",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/3-api/3.4-lambda-api/",
+	"title": "Adding an API Gateway trigger to the function",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.4-new-conversation/",
+	"title": "Create a new conversation",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.4-read-conversation/",
-	"title": "VPC Resource Map",
+	"title": "Read a conversation from Dynamo DB",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
-},
-{
-	"uri": "//localhost:1313/4-dynamodb/4.5-read-conversation-list/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
-},
-{
-	"uri": "//localhost:1313/4-dynamodb/4.6-new-mesages/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/5-break/5.4-remove/",
-	"title": "VPC Resource Map",
+	"title": "Remove hard-coded user names from Lambda",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map To begin, follow these steps to access the VPC Resource Map in the VPC console:\nSelect an existing VPC. In the details section, go to the \u0026ldquo;Resource map\u0026rdquo; tab. Here, you can observe the resources within your VPC and the relationships among them. Hovering over a resource highlights connected lines and related resources. Clicking on a resource reveals brief details and a link to view further information about that resource.\nGetting Started with VPC Creation Experience Enhance your workflow for creating a new high-availability three-tier VPC using the VPC creation experience:\nChoose Create VPC and then select VPC and more in the VPC console. Preview all VPC resources you\u0026rsquo;re about to create on a single page. Name tag auto-generation: Define a prefix for Name tags, influencing the tags for all previewed VPC resources. Customize individual Name tags by clicking on each resource.\nAdjust the default CIDR value (10.0.0.0/16) by clicking the IPv4 CIDR block field and using the CIDR joystick. Move through CIDR blocks within the /16 network mask.\nChoose the number of Availability Zones (AZs) up to 3, affecting the count of public and private subnets to be created.\nFor a three-AZ high-availability VPC, select 6 private subnets. In the preview, verify the relationships and routes in the subnets.\nAdd NAT gateways and VPC endpoints as needed. Set the number of NAT gateways per AZ for high availability. Opt for the S3 Gateway endpoint for more secure Amazon S3 traffic routing.\nEasily assign additional tags to VPC resources. Click \u0026ldquo;Add new tag,\u0026rdquo; provide a Key (e.g., \u0026ldquo;environment\u0026rdquo;) and Value (e.g., \u0026ldquo;test\u0026rdquo;).\nAt the bottom of the page, select \u0026ldquo;Create VPC\u0026rdquo; and monitor the resource creation process, including the IDs of the resources being generated. Validate resources before proceeding. Once resources are created, click \u0026ldquo;View VPC\u0026rdquo; to access the VPC resource map and visualize the setup. "
+	"content": " "
 },
 {
-	"uri": "//localhost:1313/1-intro-prepare/1.4-natgateway/",
-	"title": "NAT Gateway",
+	"uri": "//localhost:1313/4-dynamodb/",
+	"title": "Use DynamoDB for storage",
 	"tags": [],
 	"description": "",
-	"content": "NAT Gateway By default, any EC2 running inside a Private subnet will not be able to communicate with the Internet through the IGW. This situation becomes problematic when the EC2 needs to access the Internet for security updates, patch downloads, or application software updates.\nRecognizing this need, AWS offers two methods for granting EC2s in a Private subnet access to the Internet: NAT Instance and NAT Gateway. In most scenarios, it is advisable to opt for NAT Gateway over NAT Instance due to its enhanced availability, bandwidth, and reduced administrative overhead.\nTo set up a NAT gateway, you are required to specify a public subnet and an Elastic IP address. Ensure that the chosen Elastic IP address is not associated with any other instances or network interfaces.\nIn situations where transitioning from a NAT instance to a NAT gateway is desired, it is possible to reuse the Elastic IP address assigned to the NAT instance. However, prior to doing so, it is essential to disassociate the IP address from the NAT Instance.\nTip: Neither the NAT Gateway nor the NAT instance supports direct inbound traffic from the internet.\n"
+	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nContents Create DynamoDB tables Create some sample data in DynamoDB Update Lambda policy to access DynamoDB tables Read a conversation from Dynamo DB Read conversation list from DynamoDB Write new messages to DynamoDB "
+},
+{
+	"uri": "//localhost:1313/5-break/",
+	"title": "Break up the monolith – Start build Complete App",
+	"tags": [],
+	"description": "",
+	"content": "Contents Create API structure in API Gateway Lambda functions for reading and writing messages Exporting a JavaScript client and Swagger Remove hard-coded user names from Lambda "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.5-sign-up/",
+	"title": "Create sign up page",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/4-dynamodb/4.5-read-conversation-list/",
+	"title": "Read conversation list from DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": "\n"
+},
+{
+	"uri": "//localhost:1313/3-api/3.5-cors/",
+	"title": "Understand and Setup CORS",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/",
+	"title": "Add Identity to the application",
+	"tags": [],
+	"description": "",
+	"content": "Contents Create a user pool List Users in the API List Users on the site Create a new conversation Create sign up page Create verification page Add login and logout Add a Cognito authorizer to the API Gateway Results "
+},
+{
+	"uri": "//localhost:1313/3-api/3.6-call-api/",
+	"title": "Calling the API from the website",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.6-verify/",
+	"title": "Create verification page",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/4-dynamodb/4.6-new-mesages/",
+	"title": "Write new messages to DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.7-login-logout/",
+	"title": "Add login and logout",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/7-optimization-cdn/",
+	"title": "Optimization Setting up a CloudFront CDN",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.8-authorizer/",
+	"title": "Add a Cognito authorizer to the API Gateway",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/8-clear/",
+	"title": "Clear Resources ",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/6-identity/6.9-results/",
+	"title": "Results",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/categories/",

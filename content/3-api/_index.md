@@ -1,26 +1,16 @@
 ---
-title : "Firewall in VPC"
+title : "Creating an API"
 date : "`r Sys.Date()`"
-weight : 2
+weight : 3
 chapter : false
-pre : " <b> 2. </b> "
+pre : " <b> 3. </b> "
 ---
-
-## Firewall in VPC
-
-In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.
-
-### Security Groups
-
-A **Security Group** acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It's important to note that Security Groups operate at the Instance layer and not at the Subnet layer.
-
-> **Note:** Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.
-
-### Network ACLs
-
-A **Network Access Control List (ACL)** is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.
 
 ### Contents
 
-- [Security Groups](2.1-securitygroup/)
-- [Network ACLs](2.2-networkacls/)
+- [Creating a policy for the Lambda function](3.1-policy/)
+- [Code walkthrough of the first Lambda function](3.2-lambda/)
+- [Running the lambda function with test data](3.3-lambda-test/)
+- [Adding an API Gateway trigger to the function](3.4-lambda-api/)
+- [Understand and Setup CORS](3.5-cors/)
+- [Calling the API from the website](3.6-call-api/)

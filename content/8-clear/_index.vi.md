@@ -1,26 +1,35 @@
 ---
-title : "Tường lửa trong VPC"
-date :  "`r Sys.Date()`" 
-weight : 2 
+title : "Clear Resources "
+date : "`r Sys.Date()`"
+weight : 8
 chapter : false
-pre : " <b> 2. </b> "
+pre : " <b> 8. </b> "
 ---
 
-#### Tường lửa trong VPC
-
-Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.
-
-Một security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet. 
-
-{{% notice note %}}
-Security groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.
-{{% /notice %}}
-
-Danh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. 
-Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.
-
-#### Nội dung
-
-- [Security groups](2.1-securitygroup/)
-- [Network ACLs](2.2-networkacls/)
-  
+![](../../WorkShop2/08.clear/r1(1).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(10).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(11).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(12).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(13).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(14).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(15).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(16).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(17).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(18).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(19).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(2).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(20).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(21).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(22).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(23).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(24).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(25).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(26).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(27).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(3).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(4).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(5).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(6).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(7).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(8).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(9).png?featherlight=false&width=90pc)

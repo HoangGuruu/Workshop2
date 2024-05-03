@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Network ACLs :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Code walkthrough of the first Lambda function :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1714409137" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714409137" rel="stylesheet">
-    <link href="/css/hybrid.css?1714409137" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714409137" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714409137" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714409137" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714409137" rel="stylesheet">
-    <link href="/css/theme.css?1714409137" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714409137" rel="stylesheet">
+    <link href="/css/nucleus.css?1714706351" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714706351" rel="stylesheet">
+    <link href="/css/hybrid.css?1714706351" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714706351" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714706351" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714706351" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714706351" rel="stylesheet">
+    <link href="/css/theme.css?1714706351" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714706351" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714409137" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714706351" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714409137"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714706351"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714409137"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714409137"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714706351"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714706351"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714409137"></script>
+<script type="text/javascript" src="/js/search.js?1714706351"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-intro-prepare/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-intro-prepare/" title="Introduction and Preparation" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-intro-prepare/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Introduction and Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +113,13 @@
  
   
     
-    <li data-nav-id="/vi/1-intro-prepare/1.1-intro/" title="Subnets" class="dd-item 
+    <li data-nav-id="/vi/1-intro-prepare/1.1-intro/" title="Introdution" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-intro-prepare/1.1-intro/">
-           <b> 1.1 </b> Subnets
+           <b> 1.1 </b> Introdution
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,69 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/1-intro-prepare/1.2-setup/" title="Route Table" class="dd-item 
+    <li data-nav-id="/vi/1-intro-prepare/1.2-setup/" title="Setup the website" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-intro-prepare/1.2-setup/">
-           <b> 1.2 </b> Route Table
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/1-intro-prepare/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/1-intro-prepare/1.3-internetgateway/">
-           <b> 1.3 </b> Internet Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/1-intro-prepare/1.4-natgateway/" title="NAT Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/1-intro-prepare/1.4-natgateway/">
-           <b> 1.4 </b> NAT Gateway
+           <b> 1.2 </b> Setup the website
           
             <i class="fas fa-check read-icon"></i>
           
@@ -232,13 +176,13 @@
  
   
     
-    <li data-nav-id="/vi/2-static-s3/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/2-static-s3/" title="Static Chat Application with S3" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-static-s3/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 2. </b> Static Chat Application with S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -263,13 +207,13 @@
  
   
     
-    <li data-nav-id="/vi/2-static-s3/2.1-add-data/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/2-static-s3/2.1-add-data/" title="Adding static data to the website" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-static-s3/2.1-add-data/">
-           <b> 2.1 </b> Security Group
+           <b> 2.1 </b> Adding static data to the website
           
             <i class="fas fa-check read-icon"></i>
           
@@ -291,13 +235,13 @@
  
   
     
-    <li data-nav-id="/vi/2-static-s3/2.2-access-data/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/2-static-s3/2.2-access-data/" title="Accessing static data from javascript" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-static-s3/2.2-access-data/">
-           <b> 2.2 </b> Network ACLs
+           <b> 2.2 </b> Accessing static data from javascript
           
             <i class="fas fa-check read-icon"></i>
           
@@ -326,13 +270,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/3-api/" title="Creating an API" class="dd-item 
         parent
         
         
         ">
       <a href="/vi/3-api/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 3. </b> Creating an API
           
             <i class="fas fa-check read-icon"></i>
           
@@ -357,13 +301,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.1-policy/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.1-policy/" title="Creating a policy for the Lambda function" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.1-policy/">
-           <b> 2.1 </b> Security Group
+           <b> 3.1 </b> Creating a policy for the Lambda function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -385,13 +329,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.2-lambda/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.2-lambda/" title="Code walkthrough of the first Lambda function" class="dd-item 
         
         active
         
         ">
       <a href="/vi/3-api/3.2-lambda/">
-           <b> 2.2 </b> Network ACLs
+           <b> 3.2 </b> Code walkthrough of the first Lambda function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -413,13 +357,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.3-lambda-test/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.3-lambda-test/" title="Running the lambda function with test data" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.3-lambda-test/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.3 </b> Running the lambda function with test data
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,13 +385,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.4-lambda-api/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.4-lambda-api/" title="Adding an API Gateway trigger to the function" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.4-lambda-api/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.4 </b> Adding an API Gateway trigger to the function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -469,13 +413,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.5-cors/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.5-cors/" title="Understand and Setup CORS" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.5-cors/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.5 </b> Understand and Setup CORS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -497,13 +441,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.6-call-api/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.6-call-api/" title="Calling the API from the website" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.6-call-api/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.6 </b> Calling the API from the website
           
             <i class="fas fa-check read-icon"></i>
           
@@ -532,13 +476,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/" title="Use DynamoDB for storage" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 4. </b> Use DynamoDB for storage
           
             <i class="fas fa-check read-icon"></i>
           
@@ -563,13 +507,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.1-tables/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.1-tables/" title="Create DynamoDB tables" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.1-tables/">
-           <b> 2.1 </b> Security Group
+           <b> 4.1 </b> Create DynamoDB tables
           
             <i class="fas fa-check read-icon"></i>
           
@@ -591,13 +535,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.2-sample-data/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.2-sample-data/" title="Create some sample data in DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.2-sample-data/">
-           <b> 2.2 </b> Network ACLs
+           <b> 4.2 </b> Create some sample data in DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -619,13 +563,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.3-update-policy/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.3-update-policy/" title="Update Lambda policy to access DynamoDB tables" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.3-update-policy/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.3 </b> Update Lambda policy to access DynamoDB tables
           
             <i class="fas fa-check read-icon"></i>
           
@@ -647,13 +591,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.4-read-conversation/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.4-read-conversation/" title="Read a conversation from Dynamo DB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.4-read-conversation/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.4 </b> Read a conversation from Dynamo DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -675,13 +619,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.5-read-conversation-list/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.5-read-conversation-list/" title="Read conversation list from DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.5-read-conversation-list/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.5 </b> Read conversation list from DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -703,13 +647,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.6-new-mesages/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.6-new-mesages/" title="Write new messages to DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.6-new-mesages/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.6 </b> Write new messages to DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -738,13 +682,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/5-break/" title="Break up the monolith – Start build Complete App" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 5. </b> Break up the monolith – Start build Complete App
           
             <i class="fas fa-check read-icon"></i>
           
@@ -769,13 +713,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.1-api/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.1-api/" title="Create API structure in API Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.1-api/">
-           <b> 2.1 </b> Security Group
+           <b> 5.1 </b> Create API structure in API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -797,13 +741,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.2-lambda/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.2-lambda/" title="Lambda functions for reading and writing messages" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.2-lambda/">
-           <b> 2.1 </b> Security Group
+           <b> 5.2 </b> Lambda functions for reading and writing messages
           
             <i class="fas fa-check read-icon"></i>
           
@@ -825,13 +769,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.3-export/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.3-export/" title="Exporting a JavaScript client and Swagger" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.3-export/">
-           <b> 2.2 </b> Network ACLs
+           <b> 5.3 </b> Exporting a JavaScript client and Swagger
           
             <i class="fas fa-check read-icon"></i>
           
@@ -853,13 +797,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.4-remove/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.4-remove/" title="Remove hard-coded user names from Lambda" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.4-remove/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 5.4 </b> Remove hard-coded user names from Lambda
           
             <i class="fas fa-check read-icon"></i>
           
@@ -888,13 +832,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/6-identity/" title="Add Identity to the application" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 6. </b> Add Identity to the application
           
             <i class="fas fa-check read-icon"></i>
           
@@ -919,13 +863,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.1-user-pool/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.1-user-pool/" title="Create a user pool" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.1-user-pool/">
-           <b> 2.1 </b> Security Group
+           <b> 6.1 </b> Create a user pool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -947,13 +891,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.2-users-api/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.2-users-api/" title="List Users in the API" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.2-users-api/">
-           <b> 2.1 </b> Security Group
+           <b> 6.2 </b> List Users in the API
           
             <i class="fas fa-check read-icon"></i>
           
@@ -975,13 +919,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.3-users-site/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.3-users-site/" title="List Users on the site" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.3-users-site/">
-           <b> 2.1 </b> Security Group
+           <b> 6.3 </b> List Users on the site
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1003,13 +947,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.4-new-conversation/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.4-new-conversation/" title="Create a new conversation" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.4-new-conversation/">
-           <b> 2.1 </b> Security Group
+           <b> 6.4 </b> Create a new conversation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1031,13 +975,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.5-sign-up/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.5-sign-up/" title="Create sign up page" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.5-sign-up/">
-           <b> 2.1 </b> Security Group
+           <b> 6.5 </b> Create sign up page
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1059,13 +1003,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.6-verify/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.6-verify/" title="Create verification page" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.6-verify/">
-           <b> 2.1 </b> Security Group
+           <b> 6.6 </b> Create verification page
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1087,13 +1031,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.7-login-logout/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.7-login-logout/" title="Add login and logout" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.7-login-logout/">
-           <b> 2.1 </b> Security Group
+           <b> 6.7 </b> Add login and logout
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1115,13 +1059,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.8-authorizer/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.8-authorizer/" title="Add a Cognito authorizer to the API Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.8-authorizer/">
-           <b> 2.1 </b> Security Group
+           <b> 6.8 </b> Add a Cognito authorizer to the API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1143,13 +1087,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.9-results/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.9-results/" title="Results" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.9-results/">
-           <b> 2.1 </b> Security Group
+           <b> 6.9 </b> Results
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1178,13 +1122,13 @@
  
   
     
-    <li data-nav-id="/vi/7-optimization-cdn/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/7-optimization-cdn/" title="Optimization Setting up a CloudFront CDN" class="dd-item 
         
         
         
         ">
       <a href="/vi/7-optimization-cdn/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 7. </b> Optimization Setting up a CloudFront CDN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1204,13 +1148,13 @@
  
   
     
-    <li data-nav-id="/vi/8-clear/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/8-clear/" title="Clear Resources " class="dd-item 
         
         
         
         ">
       <a href="/vi/8-clear/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 8. </b> Clear Resources 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1363,7 +1307,7 @@
             
           
           
-            <a href='/vi/'>Bắt đầu với Amazon VPC và AWS VPN Site to Site</a> > <a href='/vi/3-api/'>Tường lửa trong VPC</a> > Network ACLs
+            <a href='/vi/'>Build a Complete serverless Chat Website</a> > <a href='/vi/3-api/'>Creating an API</a> > Code walkthrough of the first Lambda function
           
         
           
@@ -1376,15 +1320,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1400,7 +1336,7 @@
           
             <h1>
               
-              Network ACLs
+              Code walkthrough of the first Lambda function
             </h1>
           
 
@@ -1408,30 +1344,29 @@
 
 
 
-	<h4 id="network-acls">Network ACLs</h4>
-<ul>
-<li>VPC sau khi khởi tạo sẽ có sẵn một network ACL mặc định và có thể được sửa đổi. Mặc định, nó cấp phép truy cập cho tất cả lưu lượng truy cập IPv4 hoặc IPv6 có thể đi ra hoặc đi vào VPC.</li>
-<li>Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập.</li>
-<li>Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định.</li>
-<li>Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa.</li>
-<li>Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không.
-Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766).</li>
-<li>Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng.</li>
-<li>Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại).</li>
-</ul>
-<h4 id="network-acl-rules">Network ACL rules</h4>
-<p>Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.</p>
-<p>Các thành phần của một network ACL rule:</p>
-<ul>
-<li><strong>Rule number</strong>. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất.
-Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách.</li>
-<li><strong>Type</strong>.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh.</li>
-<li><strong>Protocol</strong>.  chỉ định giao thức cùng số giao thức chuẩn.</li>
-<li><strong>Port range</strong>. port hoặc dải port lắng nghe của lưu lượng truy cập. Ví dụ: HTTP là 80.</li>
-<li><strong>Source</strong>. [chỉ đối với Inbound rule] Xuất phát của lưu lượng truy cập (giá trị là dải CIDR).</li>
-<li><strong>Destination</strong>. [chỉ đối với Outbound rule] Điểm đến của lưu lượng truy cập (giá trị là dải CIDR).</li>
-<li><strong>Allow/Deny</strong>.  chỉ rõ là Cho phép hoặc Từ chối lưu lượng truy cập.</li>
-</ul>
+	<p><img src="../../WorkShop2/03.api/3.2.lambda/50.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.2.lambda/51.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.2.lambda/52.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.2.lambda/53.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.2.lambda/54.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.2.lambda/55.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.3.lambda-test/57.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.3.lambda-test/58.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.3.lambda-test/59.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.3.lambda-test/60.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/62.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/63.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/64.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/65.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/66.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/67.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/68.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/69.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/70.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/71.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/72.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/73.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.4.lambda-api/74.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1517,38 +1452,6 @@ Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập t�
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2123,10 +2026,10 @@ Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập t�
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/3-api/3.1-policy/" title="Security Group"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/3-api/3.1-policy/" title="Creating a policy for the Lambda function"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-api/3.3-lambda-test/" title="VPC Resource Map" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-api/3.3-lambda-test/" title="Running the lambda function with test data" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2136,19 +2039,19 @@ Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập t�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714409137"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714409137"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714409137"></script>
-    <script src="/js/jquery.sticky.js?1714409137"></script>
-    <script src="/js/featherlight.min.js?1714409137"></script>
-    <script src="/js/highlight.pack.js?1714409137"></script>
+    <script src="/js/clipboard.min.js?1714706351"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714706351"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714706351"></script>
+    <script src="/js/jquery.sticky.js?1714706351"></script>
+    <script src="/js/featherlight.min.js?1714706351"></script>
+    <script src="/js/highlight.pack.js?1714706351"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714409137"></script>
-    <script src="/js/learn.js?1714409137"></script>
-    <script src="/js/hugo-learn.js?1714409137"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714706351"></script>
+    <script src="/js/learn.js?1714706351"></script>
+    <script src="/js/hugo-learn.js?1714706351"></script>
 
-    <link href="/mermaid/mermaid.css?1714409137" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714409137"></script>
+    <link href="/mermaid/mermaid.css?1714706351" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714706351"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

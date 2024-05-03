@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Subnets on Start with Amazon VPC and AWS VPN Site-to-Site.</title>
+    <title>Introdution on Start with Amazon VPC and AWS VPN Site-to-Site.</title>
     <link>//localhost:1313/1-intro-prepare/1.1-intro/</link>
-    <description>Recent content in Subnets on Start with Amazon VPC and AWS VPN Site-to-Site.</description>
+    <description>Recent content in Introdution on Start with Amazon VPC and AWS VPN Site-to-Site.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/1-intro-prepare/1.1-intro/index.xml" rel="self" type="application/rss+xml" />

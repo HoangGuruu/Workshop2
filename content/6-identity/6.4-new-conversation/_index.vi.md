@@ -1,33 +1,36 @@
 ---
-title : "Security Group"
+title : "Create a new conversation"
 date :  "`r Sys.Date()`" 
-weight : 1
+weight : 4
 chapter : false
-pre : " <b> 2.1 </b> "
+pre : " <b> 6.4 </b> "
 ---
-#### Security Group
 
-Một số đặc điểm cơ bản của Security group:
-
-* Chỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule.
-* Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào.
-* Một Security group mới được tạo ra không có sẵn Inbound rules. 
-  Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập.
-* Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. 
-Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài.
-Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. 
-* Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào.
-* Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule  mặc định cho phép toàn bộ lưu lượng được truy cập).
-* Security group được liên kết với các network interface. 
-Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. 
-
-#### Security group Rule
-
-Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo. 
-
-Các thành phần cơ bản của Security group rule:
-* (Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port.
-Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6.
-* (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích.
-Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region).
-* Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,..
+![](../../WorkShop2/06.identity/6.4.new-conversation/333.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/334.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/335.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/336.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/337.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/338.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/339.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/340.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/341.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/342.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/343.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/344.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/345.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/346.png?featherlight=false&width=90pc)
+![](../../WorkShop2/06.identity/6.4.new-conversation/347.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/348.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/349.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/350.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/351.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/352.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/353.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/354.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/355.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/356.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/357.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/358.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/359.png?featherlight=false&width=90pc)        
+![](../../WorkShop2/06.identity/6.4.new-conversation/360.png?featherlight=false&width=90pc) 

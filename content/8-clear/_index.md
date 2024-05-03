@@ -1,26 +1,35 @@
 ---
-title : "Firewall in VPC"
+title : "Clear Resources "
 date : "`r Sys.Date()`"
-weight : 2
+weight : 8
 chapter : false
-pre : " <b> 2. </b> "
+pre : " <b> 8. </b> "
 ---
 
-## Firewall in VPC
-
-In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.
-
-### Security Groups
-
-A **Security Group** acts as a virtual firewall for an EC2 Instance, allowing control over network traffic. In a VPC, an Instance can be assigned up to 5 Security Groups. It's important to note that Security Groups operate at the Instance layer and not at the Subnet layer.
-
-> **Note:** Security Groups function at the virtual machine level, rather than the subnet level. However, each virtual machine within a subnet can be assigned to different security groups.
-
-### Network ACLs
-
-A **Network Access Control List (ACL)** is an optional security layer for VPCs. It acts as a firewall to manage incoming and outgoing traffic for one or more subnets. Network ACLs can be configured with the same rules as security groups, providing an additional layer of security to the VPC.
-
-### Contents
-
-- [Security Groups](2.1-securitygroup/)
-- [Network ACLs](2.2-networkacls/)
+![](../../WorkShop2/08.clear/r1(1).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(10).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(11).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(12).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(13).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(14).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(15).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(16).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(17).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(18).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(19).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(2).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(20).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(21).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(22).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(23).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(24).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(25).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(26).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(27).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(3).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(4).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(5).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(6).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(7).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(8).png?featherlight=false&width=90pc)
+![](../../WorkShop2/08.clear/r1(9).png?featherlight=false&width=90pc)

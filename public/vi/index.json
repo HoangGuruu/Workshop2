@@ -1,59 +1,59 @@
 [
 {
-	"uri": "//localhost:1313/vi/",
-	"title": "Bắt đầu với Amazon VPC và AWS VPN Site to Site",
+	"uri": "//localhost:1313/vi/2-static-s3/2.1-add-data/",
+	"title": "Adding static data to the website",
 	"tags": [],
 	"description": "",
-	"content": "Bắt đầu với Amazon VPC và AWS VPN Site to Site Tổng quan Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.\nNội dung Giới thiệu VPC Tường lửa trong VPC Các bước chuẩn bị Tạo EC2 Server Cấu hình Site-to-Site VPN Dọn dẹp tài nguyên "
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/",
+	"title": "Build a Complete serverless Chat Website",
+	"tags": [],
+	"description": "",
+	"content": "Build a Complete serverless Chat Website Overview In this lab, you will\nContent Introduction and Preparation Static Chat Application with S3 Creating an API Use DynamoDB for storage Break up the monolith – Start build Complete App Add Identity to the application Optimization Setting up a CloudFront CDN Clear Resources "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.1-user-pool/",
+	"title": "Create a user pool",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/5-break/5.1-api/",
+	"title": "Create API structure in API Gateway",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/4-dynamodb/4.1-tables/",
+	"title": "Create DynamoDB tables",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/3-api/3.1-policy/",
+	"title": "Creating a policy for the Lambda function",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/1-intro-prepare/",
-	"title": "Giới thiệu",
+	"title": "Introduction and Preparation",
 	"tags": [],
 	"description": "",
 	"content": "Diagram for this project Contents Introduction Setup the website "
 },
 {
-	"uri": "//localhost:1313/vi/2-static-s3/2.1-add-data/",
-	"title": "Security Group",
+	"uri": "//localhost:1313/vi/1-intro-prepare/1.1-intro/",
+	"title": "Introdution",
 	"tags": [],
 	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/3-api/3.1-policy/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/4-dynamodb/4.1-tables/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/5-break/5.1-api/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/5-break/5.2-lambda/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/6.1-user-pool/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
+	"content": "\n"
 },
 {
 	"uri": "//localhost:1313/vi/6-identity/6.2-users-api/",
@@ -70,214 +70,200 @@
 	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
 },
 {
-	"uri": "//localhost:1313/vi/6-identity/6.4-new-conversation/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/6.5-sign-up/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/6.6-verify/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/6.7-login-logout/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/6.8-authorizer/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/6.9-results/",
-	"title": "Security Group",
-	"tags": [],
-	"description": "",
-	"content": "Security Group Một số đặc điểm cơ bản của Security group:\nChỉ có thể thêm vào các Allow rule, mà không thể bổ sung Deny rule. Có thể chỉ định các rule riêng biệt cho lưu lượng truy cập đi ra hoặc đi vào. Một Security group mới được tạo ra không có sẵn Inbound rules. Do đó, tại thời điểm ban đầu Instance sẽ không cho phép bất cứ lưu lượng truy cập nào được phép đi vào, đòi hỏi ta phải bổ sung Inbound rule để cấp phép truy cập. Mặc định, Security group có sẵn Outbound rule cho phép mọi lưu lượng được phép đi ra khỏi Instance. Rule này có thể được chỉnh sửa (xóa) và bổ sung các Outbound rule cụ thể, chỉ rõ lưu lượng nào xuất phát từ Instance được phép đi ra ngoài. Nếu SG không có Outbound rule thì không một lưu lượng nào được phép đi ra khỏi Instance. Security groups là một dịch vụ Stateful - nghĩa là nếu lưu lượng đi vào Instance đã được cấp phép thì lưu lượng cũng có thể đi ra ngoài Instance, và ngược lại, bất kể Outbound rule như thế nào. Các Instance chỉ có thể giao tiếp được với nhau khi và chỉ khi chúng được liên kết với Security group cho phép kết nối, hoặc Security group mà Instance có liên kết chứa Rule cho phép lưu lượng try cập (ngoại trừ Security group mặc định với có các rule mặc định cho phép toàn bộ lưu lượng được truy cập). Security group được liên kết với các network interface. Sau khi Instance đã được khởi tạo, ta vẫn có thể thay đổi Security group đã được gán với Instance, điều này cũng thay đổi security group đang được gán với primary network interface tương ứng. Security group Rule Rule được sinh ra để cấp quyền truy cập cho lưu lượng đi vào hoặc đi ra khỏi Instance. Quyền truy cập này có thể được áp dụng cho một CIDR cụ thể hoặc cho một Security group nằm trong cùng một VPC hoặc nằm trong một VPC khác nhưng có kết nối peering đã được khởi tạo.\nCác thành phần cơ bản của Security group rule:\n(Chỉ đối với Inbound rules) gồm điểm xuất phát (nguồn) của lưu lượng truy cập và port đích hoặc dải port. Nguồn có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6. (Chỉ đối với Outbound rules) gồm đích đến của lưu lượng và port đích hay dải port đích. Đích đến có thể là một security group khác, là một dải IPv4 hoặc IPv6 CIDR hoặc đơn thuẩn là một địa chỉ IPv4 hoặc IPv6 hoặc là một dịch vụ bắt đầu bằng một tiền tố (ví dụ: igw_xxx) nằm trong danh sách prefix ID(một dịch vụ được xác định bởi prefix ID - tên và ID của dịch vụ khả dụng trong region). Mọi giao thức đều có một số giao thức chuẩn. Ví dụ: SSH là 22,.. "
-},
-{
-	"uri": "//localhost:1313/vi/1-intro-prepare/1.1-intro/",
-	"title": "Subnets",
-	"tags": [],
-	"description": "",
-	"content": "Subnets Subnet là một phân đoạn của dải địa chỉ IP mà bạn sử dụng khi khởi tạo Amazon VPC, cung cấp trực tiếp dải mạng hoạt động cho các tài nguyên AWS có thể chạy bên trong nó như Amazon EC2, Amazon RDS (CSDL Quan hệ Amazon),\u0026hellip; Các subnet cũng được xác định thông qua CIDR block (ví dụ: 10.0.1.0/24 và 192.168.0.0/24) và bắt buộc các CIDR của subnet phải nằm trong CIDR của VPC. Subnet nhỏ nhất có thể tạo được là /28 (16 địa chỉ IP). AWS lưu trữ 4 địa chỉ IP đầu tiên và 1 địa chỉ IP cuối cùng của mỗi subnet cho các mục đích kết nối mạng nội bộ. Ví dụ: subnet /28 có 16 địa chỉ IP khả dụng, nhưng loại bỏ 5 reserved IP cho AWS, như vậy còn lại 11 địa chỉ IP có thể sử dụng cho các tài nguyên hoạt động bên trong subnet này.\nAvailability Zone hay được viết tắt thành AZ là một trung tâm dữ liệu con, nằm bên trong Region và được xác định dựa treo vị trí địa lý. Bên trong AZ có thể có một hoặc nhiều subnet, nhưng một subnet chỉ có thể nằm trong duy nhất một AZ mà không thể mở rộng sang AZ khác.\nCác subnet được chia thành các loại như Public, Private, hoặc VPN-only.\nPublic subnet là subnet có route table (sẽ thảo luận sau) điều hướng lưu lượng truy cập bên trong subnet đi tới VPC IGW (cũng sẽ thảo luận sau) Private subnet thì ngược lại với Public subnet, nó không có route table điều hướng lưu lượng truy cập tới VPC IGW. VPN-only subnet là subnet mà có route table điều hướng lưu lượng truy cập tới VPG của Amazon VPC (sẽ thảo luận sau). Bất kể loại mạng con nào, dải địa chỉ IP nội bộ của subnet luôn là private (nghĩa là từ bên ngoài Internet không thể kết nối trực tiếp tới các địa chỉ thuộc dải này).\n"
-},
-{
 	"uri": "//localhost:1313/vi/2-static-s3/2.2-access-data/",
-	"title": "Network ACLs",
+	"title": "Accessing static data from javascript",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs VPC sau khi khởi tạo sẽ có sẵn một network ACL mặc định và có thể được sửa đổi. Mặc định, nó cấp phép truy cập cho tất cả lưu lượng truy cập IPv4 hoặc IPv6 có thể đi ra hoặc đi vào VPC. Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập. Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định. Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa. Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không. Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766). Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng. Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại). Network ACL rules Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.\nCác thành phần của một network ACL rule:\nRule number. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất. Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách. Type.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh. Protocol. chỉ định giao thức cùng số giao thức chuẩn. Port range. port hoặc dải port lắng nghe của lưu lượng truy cập. Ví dụ: HTTP là 80. Source. [chỉ đối với Inbound rule] Xuất phát của lưu lượng truy cập (giá trị là dải CIDR). Destination. [chỉ đối với Outbound rule] Điểm đến của lưu lượng truy cập (giá trị là dải CIDR). Allow/Deny. chỉ rõ là Cho phép hoặc Từ chối lưu lượng truy cập. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/3-api/3.2-lambda/",
-	"title": "Network ACLs",
+	"title": "Code walkthrough of the first Lambda function",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs VPC sau khi khởi tạo sẽ có sẵn một network ACL mặc định và có thể được sửa đổi. Mặc định, nó cấp phép truy cập cho tất cả lưu lượng truy cập IPv4 hoặc IPv6 có thể đi ra hoặc đi vào VPC. Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập. Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định. Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa. Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không. Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766). Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng. Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại). Network ACL rules Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.\nCác thành phần của một network ACL rule:\nRule number. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất. Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách. Type.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh. Protocol. chỉ định giao thức cùng số giao thức chuẩn. Port range. port hoặc dải port lắng nghe của lưu lượng truy cập. Ví dụ: HTTP là 80. Source. [chỉ đối với Inbound rule] Xuất phát của lưu lượng truy cập (giá trị là dải CIDR). Destination. [chỉ đối với Outbound rule] Điểm đến của lưu lượng truy cập (giá trị là dải CIDR). Allow/Deny. chỉ rõ là Cho phép hoặc Từ chối lưu lượng truy cập. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/4-dynamodb/4.2-sample-data/",
-	"title": "Network ACLs",
+	"title": "Create some sample data in DynamoDB",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs VPC sau khi khởi tạo sẽ có sẵn một network ACL mặc định và có thể được sửa đổi. Mặc định, nó cấp phép truy cập cho tất cả lưu lượng truy cập IPv4 hoặc IPv6 có thể đi ra hoặc đi vào VPC. Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập. Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định. Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa. Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không. Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766). Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng. Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại). Network ACL rules Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.\nCác thành phần của một network ACL rule:\nRule number. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất. Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách. Type.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh. Protocol. chỉ định giao thức cùng số giao thức chuẩn. Port range. port hoặc dải port lắng nghe của lưu lượng truy cập. Ví dụ: HTTP là 80. Source. [chỉ đối với Inbound rule] Xuất phát của lưu lượng truy cập (giá trị là dải CIDR). Destination. [chỉ đối với Outbound rule] Điểm đến của lưu lượng truy cập (giá trị là dải CIDR). Allow/Deny. chỉ rõ là Cho phép hoặc Từ chối lưu lượng truy cập. "
+	"content": " "
 },
 {
-	"uri": "//localhost:1313/vi/5-break/5.3-export/",
-	"title": "Network ACLs",
+	"uri": "//localhost:1313/vi/5-break/5.2-lambda/",
+	"title": "Lambda functions for reading and writing messages",
 	"tags": [],
 	"description": "",
-	"content": "Network ACLs VPC sau khi khởi tạo sẽ có sẵn một network ACL mặc định và có thể được sửa đổi. Mặc định, nó cấp phép truy cập cho tất cả lưu lượng truy cập IPv4 hoặc IPv6 có thể đi ra hoặc đi vào VPC. Có thể tạo một network ACL tùy chỉnh và liên kết nó với một subnet. Mặc định các network ACL tùy chỉnh từ chối tất cả lưu lượng truy cập đi vào và đi ra, cho đến khi ta bổ sung rule cấp phép truy cập. Từng subnet trong VPC phải được liên kết với một network ACL. Nếu subnet không được liên kết với một network ACL cụ thể thì subnet sẽ được tự động liên kết với network ACL mặc định. Một network ACL có thể liên kết với nhiều subnet. Tuy nhiên, một subnet chỉ có thể liên kết với một network ACL tại một thời điểm. Khi liên kết network ACL mới với subnet,thì liên kết trước đó sẽ bị xóa. Một network ACL chứa một danh sách các rule được đánh số khác nhau. AWS đánh giá các rule dựa trên số thứ tự được gán, bắt đầu với rule được đánh số thấp nhất, để xác định xem lưu lượng có được phép đi vào hay đi ra khỏi bất kỳ subnet nào được liên kết với network ACL hay không. Số thứ tự lớn nhất có thể được gán cho rule là 32766 (tương đương số lượng rule lớn nhất của một network ACL là 32766). Network ACL có các rule cấp phép đi vào hoặc đi ra tách biệt và rule có thể là cho phép hoặc từ chối lưu lượng. Network ACL là dịch vụ Stateless, nghĩa là phản hồi đối với lưu lượng truy cập được phép đi vào, phải tuân theo rule đối với lưu lượng truy cập đi ra (và ngược lại). Network ACL rules Có thể thêm hoặc xóa một rule khỏi network ACL mặc định hoặc tạo network ACL mới cho VPC. Khi thêm hoặc xóa một rule khỏi network ACL, các thay đổi sẽ tự động được áp dụng cho các subnet được liên kết với nó.\nCác thành phần của một network ACL rule:\nRule number. Rule bắt đầu được đánh giá bắt đầu với rule có số thứ tự thấp nhất. Ngay khi rule đó match với lưu lượng truy cập, nó sẽ ngay lập tức được áp dụng cho dù nó mâu thuẫn với một rule nào đó được đánh số lớn hơn trong danh sách. Type.loại lưu lượng, ví dụ SSH. Có thể chỉ định tất cả các loại lưu lượng truy cập hoặc phạm vi tùy chỉnh. Protocol. chỉ định giao thức cùng số giao thức chuẩn. Port range. port hoặc dải port lắng nghe của lưu lượng truy cập. Ví dụ: HTTP là 80. Source. [chỉ đối với Inbound rule] Xuất phát của lưu lượng truy cập (giá trị là dải CIDR). Destination. [chỉ đối với Outbound rule] Điểm đến của lưu lượng truy cập (giá trị là dải CIDR). Allow/Deny. chỉ rõ là Cho phép hoặc Từ chối lưu lượng truy cập. "
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/1-intro-prepare/1.2-setup/",
-	"title": "Route Table",
+	"title": "Setup the website",
 	"tags": [],
 	"description": "",
-	"content": "Route Table Route Table hay còn gọi là bảng định tuyến, cung cấp hướng dẫn định tuyến và được gán vào các Subnets. Ví dụ khi bạn tạo VPC với lớp mạng 10.10.0.0/16, cùng 2 subnet 10.10.1.0/24,10.10.2.0/24 thì mỗi subnets mặc định sẽ được gán 1 default route table.\nBên trong route table sẽ có route entry destination:10.10.0.0/16 target:local. Route entry này thể hiện các tài nguyên tạo ra trong cùng 1 VPC có thể kết nối với nhau.\n"
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/2-static-s3/",
-	"title": "Tường lửa trong VPC",
+	"title": "Static Chat Application with S3",
 	"tags": [],
 	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
+	"content": "Contents Security Groups Network ACLs "
 },
 {
 	"uri": "//localhost:1313/vi/3-api/",
-	"title": "Tường lửa trong VPC",
+	"title": "Creating an API",
 	"tags": [],
 	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
+	"content": "Contents Security Groups Network ACLs "
 },
 {
-	"uri": "//localhost:1313/vi/4-dynamodb/",
-	"title": "Tường lửa trong VPC",
+	"uri": "//localhost:1313/vi/5-break/5.3-export/",
+	"title": "Exporting a JavaScript client and Swagger",
 	"tags": [],
 	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/vi/5-break/",
-	"title": "Tường lửa trong VPC",
-	"tags": [],
-	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/vi/6-identity/",
-	"title": "Tường lửa trong VPC",
-	"tags": [],
-	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/vi/7-optimization-cdn/",
-	"title": "Tường lửa trong VPC",
-	"tags": [],
-	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/vi/8-clear/",
-	"title": "Tường lửa trong VPC",
-	"tags": [],
-	"description": "",
-	"content": "Tường lửa trong VPC Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.\nMột security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet.\nSecurity groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.\nDanh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.\nNội dung Security groups Network ACLs "
-},
-{
-	"uri": "//localhost:1313/vi/1-intro-prepare/1.3-internetgateway/",
-	"title": "Internet Gateway",
-	"tags": [],
-	"description": "",
-	"content": "Internet Gateway Internet Gateway (IGW) là một thành phần Amazon VPC giúp các tài nguyên bên trong VPC, cụ thể là EC2, có khả năng giao tiếp với Internet. IGW có khả năng co giãn mạnh theo chiều ngang, đồng thời tính dự phòng và sẵn sàng cao. Nó hoạt động như một target trong bảng định tuyến của Amazon VPC, giúp lưu lượng truy cập được định tuyến ra ngoài Internet bằng cách biên dịch địa chỉ mạng của EC2 thành địa chỉ Public IP đã được gán cho nó.\nCụ thể hơn, các EC2 Instance bên trong VPC chỉ biết các địa chỉ Private IP được gán cho nó, nhưng khi có lưu lượng được gửi từ EC2 ra ngoài Internet, IGW sẽ biên dịch địa chỉ Private IP đó thành địa chỉ Public IP (hoặc địa chỉ EIP, sẽ thảo luận sau) mà gán với EC2, và duy trì mapping 1-1 cho tới khi địa chỉ Public IP bị release.\nKhi EC2 nhận được lưu lượng truy cập từ bên ngoài Internet, IGW sẽ thực hiện dịch địa chỉ Target (địa chỉ Public IP) thành địa chỉ Private IP của EC2 Instance và chuyển tiếp lưu lượng truy cập đến Amazon VPC.\n"
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/3-api/3.3-lambda-test/",
-	"title": "VPC Resource Map",
+	"title": "Running the lambda function with test data",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
-},
-{
-	"uri": "//localhost:1313/vi/3-api/3.4-lambda-api/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
-},
-{
-	"uri": "//localhost:1313/vi/3-api/3.5-cors/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
-},
-{
-	"uri": "//localhost:1313/vi/3-api/3.6-call-api/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/4-dynamodb/4.3-update-policy/",
-	"title": "VPC Resource Map",
+	"title": "Update Lambda policy to access DynamoDB tables",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/3-api/3.4-lambda-api/",
+	"title": "Adding an API Gateway trigger to the function",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.4-new-conversation/",
+	"title": "Create a new conversation",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/4-dynamodb/4.4-read-conversation/",
-	"title": "VPC Resource Map",
+	"title": "Read a conversation from Dynamo DB",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
-},
-{
-	"uri": "//localhost:1313/vi/4-dynamodb/4.5-read-conversation-list/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
-},
-{
-	"uri": "//localhost:1313/vi/4-dynamodb/4.6-new-mesages/",
-	"title": "VPC Resource Map",
-	"tags": [],
-	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/5-break/5.4-remove/",
-	"title": "VPC Resource Map",
+	"title": "Remove hard-coded user names from Lambda",
 	"tags": [],
 	"description": "",
-	"content": "VPC Resource Map Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.\nKhi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.\nBắt đầu sử dụng trải nghiệm tạo VPC Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.\nTrải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.\nBản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.\nBạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.\n"
+	"content": " "
 },
 {
-	"uri": "//localhost:1313/vi/1-intro-prepare/1.4-natgateway/",
-	"title": "NAT Gateway",
+	"uri": "//localhost:1313/vi/4-dynamodb/",
+	"title": "Use DynamoDB for storage",
 	"tags": [],
 	"description": "",
-	"content": "NAT Gateway Mặc định, mọi EC2 chạy bên trong Private subnet thì sẽ không có khả năng giao tiếp với Internet thông qua IGW. Từ đó vấn đề phát sinh khi EC2 đó cần truy cập ra ngoài Internet để áp dụng các bản cập nhật bảo mật, tải xuống các bản vá hoặc cập nhật phần mềm ứng dụng.\nNắm bắt được nhu cầu đó, AWS cung cấp 2 phương thức cho phép các EC2 bên trong Private subnet có quyền được truy cập Internet, đó là NAT Instance và NAT Gateway. Với các trường hợp thông thường, thì ta nên sử dụng NAT Gateway thay cho NAT Instance. NAT Gateway đảm bảo tính sẵn sàng và băng thông cao hơn, đồng thời đòi hỏi ít nỗ lực quản trị hơn so với NAT Instance.\nĐể tạo một một NAT gateway, ta phải chỉ định một mạng con (public) và một địa chỉ Elastic IP. Cần đảm bảo địa chỉ Elastic IP đang không được liên kết với bất cứ Instance hoặc một Network interface nào khác.\nTrường hợp ta muốn migrate từ NAT instance sang NAT gateway, ta có thể sử dụng lại địa chỉ Elastic IP của NAT instance. Nhưng trước hết ta cần phải tách địa chỉ IP ra khỏi NAT Instance.\nNAT Gateway và NAT instance đều không hỗ trợ traffic chiều vào trực tiếp từ internet.\n"
+	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nContents Security Groups Network ACLs "
+},
+{
+	"uri": "//localhost:1313/vi/5-break/",
+	"title": "Break up the monolith – Start build Complete App",
+	"tags": [],
+	"description": "",
+	"content": "Contents Security Groups Network ACLs "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.5-sign-up/",
+	"title": "Create sign up page",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/4-dynamodb/4.5-read-conversation-list/",
+	"title": "Read conversation list from DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": "\n"
+},
+{
+	"uri": "//localhost:1313/vi/3-api/3.5-cors/",
+	"title": "Understand and Setup CORS",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/",
+	"title": "Add Identity to the application",
+	"tags": [],
+	"description": "",
+	"content": "Contents Security Groups Network ACLs "
+},
+{
+	"uri": "//localhost:1313/vi/3-api/3.6-call-api/",
+	"title": "Calling the API from the website",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.6-verify/",
+	"title": "Create verification page",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/4-dynamodb/4.6-new-mesages/",
+	"title": "Write new messages to DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.7-login-logout/",
+	"title": "Add login and logout",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/7-optimization-cdn/",
+	"title": "Optimization Setting up a CloudFront CDN",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.8-authorizer/",
+	"title": "Add a Cognito authorizer to the API Gateway",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/8-clear/",
+	"title": "Clear Resources ",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "//localhost:1313/vi/6-identity/6.9-results/",
+	"title": "Results",
+	"tags": [],
+	"description": "",
+	"content": " "
 },
 {
 	"uri": "//localhost:1313/vi/categories/",

@@ -1,21 +1,28 @@
 ---
-title : "Route Table"
+title : "Setup the website"
 date :  "`r Sys.Date()`" 
 weight : 2 
 chapter : false
 pre : " <b> 1.2 </b> "
 ---
 
-## Route Table
+![](../../WorkShop2/01.intro-prepare/1.2.setup/2.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/3.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/4.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/5.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/6.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/7.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/8.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/9.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/10.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/11.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/12.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/13.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/14.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/15.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/16.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/17.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/18.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/19.png?featherlight=false&width=90pc)
 
-The **Route Table**, also referred to as the *routing table*, is responsible for providing routing instructions within a network and is associated with specific subnets.
-
-For instance, in the scenario where a Virtual Private Cloud (VPC) is established with the network layer `10.10.0.0/16`, along with two subnets, `10.10.1.0/24` and `10.10.2.0/24`, each default subnet will be allocated a default route table.
-
-Inside the route table, there will exist a route entry with the following details:
-- **Destination**: `10.10.0.0/16`
-- **Target**: `local`
-
-This particular route entry signifies that resources created within the same VPC can communicate with each other.
-
-![Route Tables](/images/1-Introduce/routetable.png?featherlight=false&width=50pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/20.png?featherlight=false&width=90pc)

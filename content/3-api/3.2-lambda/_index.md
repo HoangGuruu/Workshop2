@@ -1,30 +1,31 @@
 ---
-title : "Network ACLs"
+title : "Code walkthrough of the first Lambda function"
 date :  "`r Sys.Date()`" 
 weight : 2
 chapter : false
-pre : " <b> 2.2 </b> "
+pre : " <b> 3.2 </b> "
 ---
 
-## Network ACLs
-
-- **Default Network ACL:** After VPC initialization, a default network ACL is available and can be modified. By default, it grants access to all IPv4 or IPv6 traffic entering or leaving the VPC.
-- **Custom Network ACL:** You can create a custom network ACL and associate it with a subnet. By default, custom network ACLs deny all incoming and outgoing traffic until access permission rules are added.
-- **Subnet Association:** Each subnet in the VPC must be associated with a network ACL. If not associated with a specific network ACL, the subnet automatically uses the default network ACL.
-- **Multiple Subnets:** A network ACL can be associated with multiple subnets, but a subnet can only be linked to one network ACL at a time. Associating a new network ACL with a subnet removes the previous association.
-- **Rule Sequencing:** Network ACLs have rules with sequence numbers. Rules are evaluated based on their sequence number, from lowest to highest, to determine traffic access for associated subnets. The maximum sequence number is 32766.
-- **Allow/Deny Traffic:** Network ACLs contain both inbound and outbound rules for allowing or denying traffic.
-- **Stateless Service:** Network ACLs are stateless; responses to allowed inbound traffic must adhere to outbound traffic rules, and vice versa.
-
-## Network ACL Rules
-
-You can manage rules for the default network ACL or create a new one for the VPC. Changes to the network ACL's rules automatically apply to its associated subnets.
-
-Components of a network ACL rule:
-- **Rule Number:** Rules are evaluated in sequence order, starting with the lowest number. Once a rule matches traffic, it's immediately applied even if it conflicts with higher-numbered rules.
-- **Type:** Defines the traffic type (e.g., SSH). Specify traffic types or custom ranges.
-- **Protocol:** Specify the protocol using standard protocol numbers.
-- **Port Range:** Define the port or port range for traffic (e.g., HTTP is 80).
-- **Source:** [Inbound Rule] Defines the traffic origin (CIDR range).
-- **Destination:** [Outbound Rule] Specifies the traffic destination (CIDR range).
-- **Allow/Deny:** Choose to Allow or Deny the specified traffic.
+![](../../WorkShop2/03.api/3.2.lambda/50.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.2.lambda/51.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.2.lambda/52.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.2.lambda/53.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.2.lambda/54.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.2.lambda/55.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.3.lambda-test/57.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.3.lambda-test/58.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.3.lambda-test/59.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.3.lambda-test/60.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/62.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/63.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/64.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/65.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/66.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/67.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/68.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/69.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/70.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/71.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/72.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/73.png?featherlight=false&width=90pc)
+![](../../WorkShop2/03.api/3.4.lambda-api/74.png?featherlight=false&width=90pc)

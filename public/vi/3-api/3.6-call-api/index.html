@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>VPC Resource Map :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Calling the API from the website :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1714409066" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714409066" rel="stylesheet">
-    <link href="/css/hybrid.css?1714409066" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714409066" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714409066" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714409066" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714409066" rel="stylesheet">
-    <link href="/css/theme.css?1714409066" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714409066" rel="stylesheet">
+    <link href="/css/nucleus.css?1714706252" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714706252" rel="stylesheet">
+    <link href="/css/hybrid.css?1714706252" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714706252" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714706252" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714706252" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714706252" rel="stylesheet">
+    <link href="/css/theme.css?1714706252" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714706252" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714409066" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714706252" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714409066"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714706252"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/">
+      <a id="logo" href="/Workshop2">
 
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714409066"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714409066"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714706252"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714706252"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714409066"></script>
+<script type="text/javascript" src="/js/search.js?1714706252"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-intro-prepare/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-intro-prepare/" title="Introduction and Preparation" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-intro-prepare/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Introduction and Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +113,13 @@
  
   
     
-    <li data-nav-id="/vi/1-intro-prepare/1.1-intro/" title="Subnets" class="dd-item 
+    <li data-nav-id="/vi/1-intro-prepare/1.1-intro/" title="Introdution" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-intro-prepare/1.1-intro/">
-           <b> 1.1 </b> Subnets
+           <b> 1.1 </b> Introdution
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,69 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/1-intro-prepare/1.2-setup/" title="Route Table" class="dd-item 
+    <li data-nav-id="/vi/1-intro-prepare/1.2-setup/" title="Setup the website" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-intro-prepare/1.2-setup/">
-           <b> 1.2 </b> Route Table
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/1-intro-prepare/1.3-internetgateway/" title="Internet Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/1-intro-prepare/1.3-internetgateway/">
-           <b> 1.3 </b> Internet Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/1-intro-prepare/1.4-natgateway/" title="NAT Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/1-intro-prepare/1.4-natgateway/">
-           <b> 1.4 </b> NAT Gateway
+           <b> 1.2 </b> Setup the website
           
             <i class="fas fa-check read-icon"></i>
           
@@ -232,13 +176,13 @@
  
   
     
-    <li data-nav-id="/vi/2-static-s3/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/2-static-s3/" title="Static Chat Application with S3" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-static-s3/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 2. </b> Static Chat Application with S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -263,13 +207,13 @@
  
   
     
-    <li data-nav-id="/vi/2-static-s3/2.1-add-data/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/2-static-s3/2.1-add-data/" title="Adding static data to the website" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-static-s3/2.1-add-data/">
-           <b> 2.1 </b> Security Group
+           <b> 2.1 </b> Adding static data to the website
           
             <i class="fas fa-check read-icon"></i>
           
@@ -291,13 +235,13 @@
  
   
     
-    <li data-nav-id="/vi/2-static-s3/2.2-access-data/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/2-static-s3/2.2-access-data/" title="Accessing static data from javascript" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-static-s3/2.2-access-data/">
-           <b> 2.2 </b> Network ACLs
+           <b> 2.2 </b> Accessing static data from javascript
           
             <i class="fas fa-check read-icon"></i>
           
@@ -326,13 +270,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/3-api/" title="Creating an API" class="dd-item 
         parent
         
         
         ">
       <a href="/vi/3-api/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 3. </b> Creating an API
           
             <i class="fas fa-check read-icon"></i>
           
@@ -357,13 +301,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.1-policy/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.1-policy/" title="Creating a policy for the Lambda function" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.1-policy/">
-           <b> 2.1 </b> Security Group
+           <b> 3.1 </b> Creating a policy for the Lambda function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -385,13 +329,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.2-lambda/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.2-lambda/" title="Code walkthrough of the first Lambda function" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.2-lambda/">
-           <b> 2.2 </b> Network ACLs
+           <b> 3.2 </b> Code walkthrough of the first Lambda function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -413,13 +357,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.3-lambda-test/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.3-lambda-test/" title="Running the lambda function with test data" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.3-lambda-test/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.3 </b> Running the lambda function with test data
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,13 +385,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.4-lambda-api/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.4-lambda-api/" title="Adding an API Gateway trigger to the function" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.4-lambda-api/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.4 </b> Adding an API Gateway trigger to the function
           
             <i class="fas fa-check read-icon"></i>
           
@@ -469,13 +413,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.5-cors/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.5-cors/" title="Understand and Setup CORS" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-api/3.5-cors/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.5 </b> Understand and Setup CORS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -497,13 +441,13 @@
  
   
     
-    <li data-nav-id="/vi/3-api/3.6-call-api/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/3-api/3.6-call-api/" title="Calling the API from the website" class="dd-item 
         
         active
         
         ">
       <a href="/vi/3-api/3.6-call-api/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 3.6 </b> Calling the API from the website
           
             <i class="fas fa-check read-icon"></i>
           
@@ -532,13 +476,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/" title="Use DynamoDB for storage" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 4. </b> Use DynamoDB for storage
           
             <i class="fas fa-check read-icon"></i>
           
@@ -563,13 +507,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.1-tables/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.1-tables/" title="Create DynamoDB tables" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.1-tables/">
-           <b> 2.1 </b> Security Group
+           <b> 4.1 </b> Create DynamoDB tables
           
             <i class="fas fa-check read-icon"></i>
           
@@ -591,13 +535,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.2-sample-data/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.2-sample-data/" title="Create some sample data in DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.2-sample-data/">
-           <b> 2.2 </b> Network ACLs
+           <b> 4.2 </b> Create some sample data in DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -619,13 +563,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.3-update-policy/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.3-update-policy/" title="Update Lambda policy to access DynamoDB tables" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.3-update-policy/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.3 </b> Update Lambda policy to access DynamoDB tables
           
             <i class="fas fa-check read-icon"></i>
           
@@ -647,13 +591,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.4-read-conversation/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.4-read-conversation/" title="Read a conversation from Dynamo DB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.4-read-conversation/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.4 </b> Read a conversation from Dynamo DB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -675,13 +619,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.5-read-conversation-list/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.5-read-conversation-list/" title="Read conversation list from DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.5-read-conversation-list/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.5 </b> Read conversation list from DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -703,13 +647,13 @@
  
   
     
-    <li data-nav-id="/vi/4-dynamodb/4.6-new-mesages/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/4-dynamodb/4.6-new-mesages/" title="Write new messages to DynamoDB" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-dynamodb/4.6-new-mesages/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 4.6 </b> Write new messages to DynamoDB
           
             <i class="fas fa-check read-icon"></i>
           
@@ -738,13 +682,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/5-break/" title="Break up the monolith – Start build Complete App" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 5. </b> Break up the monolith – Start build Complete App
           
             <i class="fas fa-check read-icon"></i>
           
@@ -769,13 +713,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.1-api/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.1-api/" title="Create API structure in API Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.1-api/">
-           <b> 2.1 </b> Security Group
+           <b> 5.1 </b> Create API structure in API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -797,13 +741,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.2-lambda/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.2-lambda/" title="Lambda functions for reading and writing messages" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.2-lambda/">
-           <b> 2.1 </b> Security Group
+           <b> 5.2 </b> Lambda functions for reading and writing messages
           
             <i class="fas fa-check read-icon"></i>
           
@@ -825,13 +769,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.3-export/" title="Network ACLs" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.3-export/" title="Exporting a JavaScript client and Swagger" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.3-export/">
-           <b> 2.2 </b> Network ACLs
+           <b> 5.3 </b> Exporting a JavaScript client and Swagger
           
             <i class="fas fa-check read-icon"></i>
           
@@ -853,13 +797,13 @@
  
   
     
-    <li data-nav-id="/vi/5-break/5.4-remove/" title="VPC Resource Map" class="dd-item 
+    <li data-nav-id="/vi/5-break/5.4-remove/" title="Remove hard-coded user names from Lambda" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-break/5.4-remove/">
-           <b> 2.3 </b> VPC Resource Map
+           <b> 5.4 </b> Remove hard-coded user names from Lambda
           
             <i class="fas fa-check read-icon"></i>
           
@@ -888,13 +832,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/6-identity/" title="Add Identity to the application" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 6. </b> Add Identity to the application
           
             <i class="fas fa-check read-icon"></i>
           
@@ -919,13 +863,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.1-user-pool/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.1-user-pool/" title="Create a user pool" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.1-user-pool/">
-           <b> 2.1 </b> Security Group
+           <b> 6.1 </b> Create a user pool
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1003,13 +947,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.4-new-conversation/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.4-new-conversation/" title="Create a new conversation" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.4-new-conversation/">
-           <b> 2.1 </b> Security Group
+           <b> 6.4 </b> Create a new conversation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1031,13 +975,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.5-sign-up/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.5-sign-up/" title="Create sign up page" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.5-sign-up/">
-           <b> 2.1 </b> Security Group
+           <b> 6.5 </b> Create sign up page
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1059,13 +1003,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.6-verify/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.6-verify/" title="Create verification page" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.6-verify/">
-           <b> 2.1 </b> Security Group
+           <b> 6.6 </b> Create verification page
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1087,13 +1031,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.7-login-logout/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.7-login-logout/" title="Add login and logout" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.7-login-logout/">
-           <b> 2.1 </b> Security Group
+           <b> 6.7 </b> Add login and logout
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1115,13 +1059,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.8-authorizer/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.8-authorizer/" title="Add a Cognito authorizer to the API Gateway" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.8-authorizer/">
-           <b> 2.1 </b> Security Group
+           <b> 6.8 </b> Add a Cognito authorizer to the API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1143,13 +1087,13 @@
  
   
     
-    <li data-nav-id="/vi/6-identity/6.9-results/" title="Security Group" class="dd-item 
+    <li data-nav-id="/vi/6-identity/6.9-results/" title="Results" class="dd-item 
         
         
         
         ">
       <a href="/vi/6-identity/6.9-results/">
-           <b> 2.1 </b> Security Group
+           <b> 6.9 </b> Results
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1178,13 +1122,13 @@
  
   
     
-    <li data-nav-id="/vi/7-optimization-cdn/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/7-optimization-cdn/" title="Optimization Setting up a CloudFront CDN" class="dd-item 
         
         
         
         ">
       <a href="/vi/7-optimization-cdn/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 7. </b> Optimization Setting up a CloudFront CDN
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1204,13 +1148,13 @@
  
   
     
-    <li data-nav-id="/vi/8-clear/" title="Tường lửa trong VPC" class="dd-item 
+    <li data-nav-id="/vi/8-clear/" title="Clear Resources " class="dd-item 
         
         
         
         ">
       <a href="/vi/8-clear/">
-           <b> 2. </b> Tường lửa trong VPC
+           <b> 8. </b> Clear Resources 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1363,7 +1307,7 @@
             
           
           
-            <a href='/vi/'>Bắt đầu với Amazon VPC và AWS VPN Site to Site</a> > <a href='/vi/3-api/'>Tường lửa trong VPC</a> > VPC Resource Map
+            <a href='/vi/'>Build a Complete serverless Chat Website</a> > <a href='/vi/3-api/'>Creating an API</a> > Calling the API from the website
           
         
           
@@ -1376,15 +1320,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1400,7 +1336,7 @@
           
             <h1>
               
-              VPC Resource Map
+              Calling the API from the website
             </h1>
           
 
@@ -1408,15 +1344,14 @@
 
 
 
-	<h4 id="vpc-resource-map">VPC Resource Map</h4>
-<p>Để bắt đầu, hãy chọn một VPC đã tồn tại trong bảng điều khiển VPC. Trong phần chi tiết, hãy chọn tab Sơ đồ Tài nguyên. Tại đây, bạn có thể xem các tài nguyên trong VPC của bạn và mối quan hệ giữa các tài nguyên đó.</p>
-<p>Khi trỏ chuột qua một tài nguyên, bạn có thể xem các tài nguyên liên quan và các đường nối được đánh dấu. Nếu bạn nhấp chuột để chọn tài nguyên, bạn có thể xem một số dòng chi tiết và một liên kết để xem chi tiết của tài nguyên đã chọn.</p>
-<h4 id="bắt-đầu-sử-dụng-trải-nghiệm-tạo-vpc">Bắt đầu sử dụng trải nghiệm tạo VPC</h4>
-<p>Bản đồ tài nguyên Amazon VPC hiện nay có sẵn trong tất cả các Vùng AWS mà Amazon VPC có sẵn, và bạn có thể bắt đầu sử dụng nó từ hôm nay.</p>
-<p>Trải nghiệm tạo bản đồ tài nguyên VPC và tạo mới chỉ hiển thị VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3.</p>
-<p>Bản đồ tài nguyên Amazon Virtual Private Cloud (VPC) là một tính năng cho phép bạn xem và quản lý tất cả các tài nguyên trong mạng VPC của bạn tại một nơi. Với bản đồ tài nguyên VPC, bạn có thể xem mối quan hệ giữa VPC, subnet, bảng định tuyến, cổng tiếp cận Internet, cổng NAT và cổng tiếp cận Amazon S3, giúp cho bạn hiểu rõ cấu trúc và kết nối của mạng của bạn.</p>
-<p>Bạn có thể sử dụng bản đồ tài nguyên VPC để tạo, chỉnh sửa và xóa các tài nguyên VPC, cũng như hình dung luồng truyền dữ liệu mạng giữa chúng. Điều này rất hữu ích khi bạn làm việc với cấu hình VPC phức tạp và muốn đảm bảo mạng của bạn.</p>
-<p><img alt="Create VPC" src="/images/17/0006.jpg?featherlight=false&width=90pc"></p>
+	<p><img src="../../WorkShop2/03.api/3.6.call-api/80.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/81.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/82.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/83.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/84.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/85.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/86.png?featherlight=false&width=90pc">
+<img src="../../WorkShop2/03.api/3.6.call-api/87.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1502,38 +1437,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2108,10 +2011,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/3-api/3.5-cors/" title="VPC Resource Map"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/3-api/3.5-cors/" title="Understand and Setup CORS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/4-dynamodb/" title="Tường lửa trong VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/4-dynamodb/" title="Use DynamoDB for storage" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2121,19 +2024,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714409066"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714409066"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714409066"></script>
-    <script src="/js/jquery.sticky.js?1714409066"></script>
-    <script src="/js/featherlight.min.js?1714409066"></script>
-    <script src="/js/highlight.pack.js?1714409066"></script>
+    <script src="/js/clipboard.min.js?1714706252"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714706252"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714706252"></script>
+    <script src="/js/jquery.sticky.js?1714706252"></script>
+    <script src="/js/featherlight.min.js?1714706252"></script>
+    <script src="/js/highlight.pack.js?1714706252"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714409066"></script>
-    <script src="/js/learn.js?1714409066"></script>
-    <script src="/js/hugo-learn.js?1714409066"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714706252"></script>
+    <script src="/js/learn.js?1714706252"></script>
+    <script src="/js/hugo-learn.js?1714706252"></script>
 
-    <link href="/mermaid/mermaid.css?1714409066" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714409066"></script>
+    <link href="/mermaid/mermaid.css?1714706252" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714706252"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

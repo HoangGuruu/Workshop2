@@ -1,26 +1,22 @@
 ---
-title : "Tường lửa trong VPC"
-date :  "`r Sys.Date()`" 
-weight : 2 
+title : "Use DynamoDB for storage"
+date : "`r Sys.Date()`"
+weight : 4
 chapter : false
-pre : " <b> 2. </b> "
+pre : " <b> 4. </b> "
 ---
 
-#### Tường lửa trong VPC
+## Firewall in VPC
 
-Trong phần này, chúng ta sẽ cùng tìm hiểu các tính năng bảo mật cơ bản trong Amazon VPC như tính năng tường lửa Security Group và Network Access Control Lists.
+In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.
 
-Một security group hoạt động như một tường lửa ảo cho EC2 Instance, giúp kiểm soát lưu lượng truy cập. Một Instance trong VPC có thể được gán tối đa 5 Security group do SG chỉ hoạt động ở tầng Instance mà không họat động ở tầng Subnet. 
 
-{{% notice note %}}
-Security groups hoạt động ở mức máy ảo, không phải ở mức subnet. Tuy nhiên, mỗi máy ảo trong một subnet có thể được gán với nhiều bộ Security group khác nhau.
-{{% /notice %}}
 
-Danh sách kiểm soát truy cập mạng (ACL) là lớp bảo mật tùy chọn cho VPC, nó hoạt động như một tường lửa để kiểm soát lưu lượng ra và vào cho một hoặc nhiều subnet. 
-Ta có thể thiết lập network ACL với các rule tương tự như security groups, nhằm bổ sung thêm một lớp bảo mật nữa cho VPC.
+### Contents
 
-#### Nội dung
-
-- [Security groups](2.1-securitygroup/)
-- [Network ACLs](2.2-networkacls/)
-  
+- [Create DynamoDB tables](4.1-tables/)
+- [Create some sample data in DynamoDB](4.2-sample-data/)
+- [Update Lambda policy to access DynamoDB tables](4.3-update-policy/)
+- [Read a conversation from Dynamo DB](4.4-read-conversation/)
+- [Read conversation list from DynamoDB](4.5-read-conversation-list/)
+- [Write new messages to DynamoDB](4.6-new-mesages/)

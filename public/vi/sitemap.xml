@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/1-intro-prepare/</loc>
     <xhtml:link
                 rel="alternate"
@@ -204,6 +192,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-intro-prepare/1.1-intro/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-static-s3/2.2-access-data/</loc>

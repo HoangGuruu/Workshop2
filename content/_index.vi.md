@@ -1,25 +1,25 @@
 ---
-title : "Xây dựng một trang web trò chuyện hoàn chỉnh Serverless"
-date :  "`r Sys.Date()`" 
-weight : 1 
+title : "Build a Complete serverless Chat Website"
+date : "`r Sys.Date()`"
+weight : 1
 chapter : false
 ---
 
-# Xây dựng một trang web trò chuyện hoàn chỉnh Serverless
+# Build a Complete serverless Chat Website
 
-#### Tổng quan
+#### Overview
 
-Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon VPC ( Virtual Private Networking ). Tìm hiểu các khái niệm chính, các tính năng trong Amazon VPC. Thực hành tạo VPC cơ bản và thực hiện cấu hình Site to Site VPN để kết nối môi trường on-premise tới môi trường VPC của AWS.
+In this lab, you will 
 
+![](../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
 
-![VPC](../images/1-Introduce/serviceicon.png?featherlight=false&width=10pc)
+#### Content
 
-#### Nội dung
-
-1. [Giới thiệu VPC](1-introduce/)
-2. [Tường lửa trong VPC](2-firewallinvpc/)
-3. [Các bước chuẩn bị](3-prerequiste/) 
-4. [Tạo EC2 Server](4-createec2server/)
-5. [Cấu hình Site-to-Site VPN](5-vpnsitetosite/)
-6. [Dọn dẹp tài nguyên](6-cleanup/)
-
+1. [Introduction and Preparation](1-introduce/)
+2. [Static Chat Application with S3](2-static-s3/)
+3. [Creating an API](3-api/)
+4. [Use DynamoDB for storage](4-dynamodb/)
+5. [Break up the monolith – Start build Complete App](5-break/)
+6. [Add Identity to the application](6-identity/)
+7. [Optimization Setting up a CloudFront CDN](7-optimization-cdn/)
+8. [Clear Resources ](8-clear/)

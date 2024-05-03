@@ -26,6 +26,18 @@
                 href="//localhost:1313/1-intro-prepare/"
                 />
   </url><url>
+    <loc>//localhost:1313/1-intro-prepare/1.1-intro/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-intro-prepare/1.1-intro/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-intro-prepare/1.1-intro/"
+                />
+  </url><url>
     <loc>//localhost:1313/2-static-s3/2.1-add-data/</loc>
     <xhtml:link
                 rel="alternate"
@@ -192,18 +204,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/6-identity/6.9-results/"
-                />
-  </url><url>
-    <loc>//localhost:1313/1-intro-prepare/1.1-intro/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-intro-prepare/1.1-intro/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-intro-prepare/1.1-intro/"
                 />
   </url><url>
     <loc>//localhost:1313/2-static-s3/</loc>

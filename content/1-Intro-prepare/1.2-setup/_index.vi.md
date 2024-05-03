@@ -1,16 +1,28 @@
 ---
-title : "Route Table"
+title : "Setup the website"
 date :  "`r Sys.Date()`" 
 weight : 2 
 chapter : false
 pre : " <b> 1.2 </b> "
 ---
 
-#### Route Table
+![](../../WorkShop2/01.intro-prepare/1.2.setup/2.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/3.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/4.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/5.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/6.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/7.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/8.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/9.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/10.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/11.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/12.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/13.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/14.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/15.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/16.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/17.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/18.png?featherlight=false&width=90pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/19.png?featherlight=false&width=90pc)
 
-**Route Table** hay còn gọi là bảng định tuyến, cung cấp hướng dẫn định tuyến và được gán vào các Subnets. 
-Ví dụ khi bạn tạo VPC với lớp mạng 10.10.0.0/16, cùng 2 subnet 10.10.1.0/24,10.10.2.0/24 thì mỗi subnets mặc định sẽ được gán 1 default route table.\
-Bên trong route table sẽ có route entry **destination**:10.10.0.0/16 **target**:local. Route entry này thể hiện các tài nguyên tạo ra trong cùng 1 VPC có thể kết nối với nhau.
-
-
-![Route Tables](/images/1-Introduce/routetable.png?featherlight=false&width=50pc)
+![](../../WorkShop2/01.intro-prepare/1.2.setup/20.png?featherlight=false&width=90pc)
