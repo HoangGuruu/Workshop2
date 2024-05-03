@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/1-intro-prepare/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-intro-prepare/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-intro-prepare/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/2-static-s3/2.1-add-data/</loc>
     <xhtml:link
                 rel="alternate"
@@ -26,52 +14,16 @@
                 href="//localhost:1313/vi/2-static-s3/2.1-add-data/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-api/3.1-policy/</loc>
+    <loc>//localhost:1313/vi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-api/3.1-policy/"
+                href="//localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-api/3.1-policy/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-dynamodb/4.1-tables/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-dynamodb/4.1-tables/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-dynamodb/4.1-tables/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-break/5.1-api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-break/5.1-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-break/5.1-api/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-break/5.2-lambda/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-break/5.2-lambda/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-break/5.2-lambda/"
+                href="//localhost:1313/vi/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/6-identity/6.1-user-pool/</loc>
@@ -86,100 +38,52 @@
                 href="//localhost:1313/vi/6-identity/6.1-user-pool/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.2-users-api/</loc>
+    <loc>//localhost:1313/vi/5-break/5.1-api/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-identity/6.2-users-api/"
+                href="//localhost:1313/5-break/5.1-api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.2-users-api/"
+                href="//localhost:1313/vi/5-break/5.1-api/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.3-users-site/</loc>
+    <loc>//localhost:1313/vi/4-dynamodb/4.1-tables/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-identity/6.3-users-site/"
+                href="//localhost:1313/4-dynamodb/4.1-tables/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.3-users-site/"
+                href="//localhost:1313/vi/4-dynamodb/4.1-tables/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.4-new-conversation/</loc>
+    <loc>//localhost:1313/vi/3-api/3.1-policy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-identity/6.4-new-conversation/"
+                href="//localhost:1313/3-api/3.1-policy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.4-new-conversation/"
+                href="//localhost:1313/vi/3-api/3.1-policy/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.5-sign-up/</loc>
+    <loc>//localhost:1313/vi/1-intro-prepare/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-identity/6.5-sign-up/"
+                href="//localhost:1313/1-intro-prepare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.5-sign-up/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.6-verify/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-identity/6.6-verify/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.6-verify/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.7-login-logout/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-identity/6.7-login-logout/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.7-login-logout/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.8-authorizer/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-identity/6.8-authorizer/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.8-authorizer/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-identity/6.9-results/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-identity/6.9-results/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-identity/6.9-results/"
+                href="//localhost:1313/vi/1-intro-prepare/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/1-intro-prepare/1.1-intro/</loc>
@@ -192,18 +96,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-intro-prepare/1.1-intro/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-static-s3/2.2-access-data/</loc>
@@ -242,16 +134,28 @@
                 href="//localhost:1313/vi/4-dynamodb/4.2-sample-data/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-break/5.3-export/</loc>
+    <loc>//localhost:1313/vi/5-break/5.2-lambda/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-break/5.3-export/"
+                href="//localhost:1313/5-break/5.2-lambda/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-break/5.3-export/"
+                href="//localhost:1313/vi/5-break/5.2-lambda/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/6.2-users-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/6.2-users-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/6.2-users-api/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/1-intro-prepare/1.2-setup/</loc>
@@ -290,6 +194,102 @@
                 href="//localhost:1313/vi/3-api/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/5-break/5.3-export/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-break/5.3-export/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-break/5.3-export/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/6.3-users-site/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/6.3-users-site/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/6.3-users-site/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-api/3.3-lambda-test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-api/3.3-lambda-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-api/3.3-lambda-test/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4-dynamodb/4.3-update-policy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-dynamodb/4.3-update-policy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-dynamodb/4.3-update-policy/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-api/3.4-lambda-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-api/3.4-lambda-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-api/3.4-lambda-api/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/6.4-new-conversation/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/6.4-new-conversation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/6.4-new-conversation/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4-dynamodb/4.4-read-conversation/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-dynamodb/4.4-read-conversation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-dynamodb/4.4-read-conversation/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/5-break/5.4-remove/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-break/5.4-remove/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-break/5.4-remove/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/4-dynamodb/</loc>
     <xhtml:link
                 rel="alternate"
@@ -314,124 +314,16 @@
                 href="//localhost:1313/vi/5-break/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-identity/</loc>
+    <loc>//localhost:1313/vi/6-identity/6.5-sign-up/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-identity/"
+                href="//localhost:1313/6-identity/6.5-sign-up/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-identity/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/7-optimization-cdn/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-optimization-cdn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-optimization-cdn/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/8-clear/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-clear/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-clear/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/1-intro-prepare/1.3-internetgateway/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-intro-prepare/1.3-internetgateway/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-intro-prepare/1.3-internetgateway/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-api/3.3-lambda-test/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-api/3.3-lambda-test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-api/3.3-lambda-test/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-api/3.4-lambda-api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-api/3.4-lambda-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-api/3.4-lambda-api/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-api/3.5-cors/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-api/3.5-cors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-api/3.5-cors/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-api/3.6-call-api/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-api/3.6-call-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-api/3.6-call-api/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-dynamodb/4.3-update-policy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-dynamodb/4.3-update-policy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-dynamodb/4.3-update-policy/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-dynamodb/4.4-read-conversation/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-dynamodb/4.4-read-conversation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-dynamodb/4.4-read-conversation/"
+                href="//localhost:1313/vi/6-identity/6.5-sign-up/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/4-dynamodb/4.5-read-conversation-list/</loc>
@@ -446,6 +338,54 @@
                 href="//localhost:1313/vi/4-dynamodb/4.5-read-conversation-list/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/3-api/3.5-cors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-api/3.5-cors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-api/3.5-cors/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-api/3.6-call-api/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-api/3.6-call-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-api/3.6-call-api/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/6.6-verify/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/6.6-verify/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/6.6-verify/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/4-dynamodb/4.6-new-mesages/</loc>
     <xhtml:link
                 rel="alternate"
@@ -458,28 +398,64 @@
                 href="//localhost:1313/vi/4-dynamodb/4.6-new-mesages/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-break/5.4-remove/</loc>
+    <loc>//localhost:1313/vi/6-identity/6.7-login-logout/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-break/5.4-remove/"
+                href="//localhost:1313/6-identity/6.7-login-logout/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-break/5.4-remove/"
+                href="//localhost:1313/vi/6-identity/6.7-login-logout/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/1-intro-prepare/1.4-natgateway/</loc>
+    <loc>//localhost:1313/vi/7-optimization-cdn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-intro-prepare/1.4-natgateway/"
+                href="//localhost:1313/7-optimization-cdn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-intro-prepare/1.4-natgateway/"
+                href="//localhost:1313/vi/7-optimization-cdn/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/6.8-authorizer/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/6.8-authorizer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/6.8-authorizer/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/8-clear/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/8-clear/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/8-clear/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/6-identity/6.9-results/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/6-identity/6.9-results/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/6-identity/6.9-results/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/categories/</loc>
