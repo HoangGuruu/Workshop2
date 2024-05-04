@@ -179,7 +179,7 @@
 	"title": "Break up the monolith – Start build Complete App",
 	"tags": [],
 	"description": "",
-	"content": "Contents Security Groups Network ACLs "
+	"content": "Contents Create API structure in API Gateway Lambda functions for reading and writing messages Exporting a JavaScript client and Swagger Remove hard-coded user names from Lambda "
 },
 {
 	"uri": "//localhost:1313/vi/6-identity/6.5-sign-up/",

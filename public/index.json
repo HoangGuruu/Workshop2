@@ -4,7 +4,7 @@
 	"title": "Adding static data to the website",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At the interface of the created bucket Choose Upload Choose Add files Go to v2, Choose and drag and drop the file Choose Grant public-read access Choose I understand Choose Upload to upload the file to S3 Access the browser to confirm the json data files Path : ../1.json\nPath : ../2.json Path ../conversation.json "
 },
 {
 	"uri": "//localhost:1313/",
@@ -32,14 +32,14 @@
 	"title": "Create DynamoDB tables",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At the AWS Console interface Choose DynamoDB Choose Create table At the DynamoDB Table interface Table name: Chat-Messages Partition key: ConversationId Sort key: Timestamp Choose Create table Choose create table to create the second table At the table creation interface Table name : Chat-Conversations Partition key: ConversationId Sort key: Username Scroll down and Choose Create global index At the GSI interface Partition key : User name Sort key: ConversationId Choose Create index Choose Create table "
 },
 {
 	"uri": "//localhost:1313/3-api/3.1-policy/",
 	"title": "Creating a policy for the Lambda function",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Access IAM At the IAM interface Choose Policies Choose Create policy At the Policy interface Choose service: S3 Choose Actions allowed: GetObject Choose Resource: Specific Add ARNs 4. At the ARN interface\nName bucket: chat-app-lab Object name: * Choose Add ARNs 5. Name the Policy\nPolicy name : S3-Access-ChatApp 6. Choose Create policy\n7. At the IAM interface\nChoose Roles Choose Create role 8. Choose AWS Service\n9. Choose Lambda service\nChoose Next 10. At Add permissions\nFind and Choose S3-Access-ChatApp Find and Choose AWSLambdaBasicExecutionRole Choose Next At Name, review and create Role name: Lambda-Role Choose Create role "
 },
 {
 	"uri": "//localhost:1313/1-intro-prepare/",
@@ -53,28 +53,28 @@
 	"title": "Introdution",
 	"tags": [],
 	"description": "",
-	"content": "\n"
+	"content": "\nS3 API Gateway Lambda DynamoDB Cognito Cloudfront "
 },
 {
 	"uri": "//localhost:1313/2-static-s3/2.2-access-data/",
 	"title": "Accessing static data from javascript",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Access the link Path: {s3_url}/chats.html Choose Brian to view the conversation data. Check the conversation data "
 },
 {
 	"uri": "//localhost:1313/3-api/3.2-lambda/",
 	"title": "Code walkthrough of the first Lambda function",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At AWS Console Choose Lambda At the create function interface Choose author from scratch Function name: Lambda-ChatApp-Proxy Choose Runtime: Nodejs 18.x Choose Create function Use the created role: Lambda-Role-ChatApp Enter the code for the function Copy the code and paste it into index.js echo (\u0026#34;code\u0026#34;); Choose Deploy "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.2-sample-data/",
 	"title": "Create some sample data in DynamoDB",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Choose Chat-Messages Table Choose create item Choose Add new attribute ConversationId: 1 Timestamp: 123456789 Sender: Brian Message: Hello World Choose Create Item After creating the first item Choose Action Choose Edit item Change Sender: Frank Choose Create item At the create item interface for table: Chat-Conversations ConversationId: 1 Username: Brian Choose Create Item At the interface create item for table: Chat-Conversations ConversationId: 1 Username: Student Choose Create Item At the create item interface for the table: Chat-Conversations ConversationId: 2 Username: Frank Choose Create Item At the interface create item for table: - Chat-Conversations ConversationId: 1 Username: Student Choose Create Item "
 },
 {
 	"uri": "//localhost:1313/5-break/5.2-lambda/",
@@ -95,7 +95,7 @@
 	"title": "Setup the website",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Access AWS Console Management Locate and choose S3 Choose Create Bucket In the S3 Interface Bucket name: chat-app-lab Untick Block all public access Choose ACLs enabled Tick I acknowledge \u0026hellip; Choose Create bucket After creating the bucket Choose: chat-app-lab Choose Upload Choose Add files With the downloaded folder, go to v1 to copy the original files to S3 Select all then drag and drop Choose Upload Choose all downloaded files Choose Actions Choose Make public using ACL Choose Make public At the S3 interface Choose Properties Scroll down to Static website hosting Select Edit At the static website interface Select enable for static website hosting Hosting type : Host a static website At Index document Fill in: index.html Choose save changes Copy the website output link Access the browser with the copied link "
 },
 {
 	"uri": "//localhost:1313/2-static-s3/",
@@ -130,21 +130,21 @@
 	"title": "Running the lambda function with test data",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Choose Test Choose Configure test event Choose Create test event Event name : Get-Data-From-S3 Event JSON: {} Choose Save Run TEST and view the results "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.3-update-policy/",
 	"title": "Update Lambda policy to access DynamoDB tables",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At the IAM interface At the IAM interface Complete the policy and copy paste the JSON Select Next Click Review and create Policy name: Access-DynamoDB-ChatApp Select Create policy Find and choose Role: Lambda-Role-ChatApp Choose Add permissions Choose Attach policies Tick Policy : Access-DynamoDB-ChatApp Choose Add Permission "
 },
 {
 	"uri": "//localhost:1313/3-api/3.4-lambda-api/",
 	"title": "Adding an API Gateway trigger to the function",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At the AWS Console interface Choose API Gateway Choose Build at REST API Configure the API Name: Chat-API Type: Edge-optimized Choose Create API At Chat-API interface Choose Create resource At the resource interface Resource name: {proxy+} Choose Create resource Choose ANY under /{proxy+} Choose Edit integration Choose Lambda function Choose the link of the created lambda function: Lambda-ChatApp-Proxy Leave the rest as default and Choose Save Choose Test Choose method: GET Test and see the results are returned Check results "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.4-new-conversation/",
@@ -158,7 +158,7 @@
 	"title": "Read a conversation from Dynamo DB",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At the code of lambda function Choose Test Choose Configure test event At Configure test event interface Choose Edit saved event Event JSON: { \u0026#34;pathParameters\u0026#34;:{ \u0026#34;proxy\u0026#34;: \u0026#34;conversations/1\u0026#34; } } Choose Save Choose Test At S3 Bucket Choose Upload Choose Add files Go to v4 Go to site Add file to upload Choose Grant public-read acccess Choose I understand Choose Upload Access browser and test again\nAt API interface Choose Test Method type: GET proxy: conversations Choose Test Chech the results "
 },
 {
 	"uri": "//localhost:1313/5-break/5.4-remove/",
@@ -172,7 +172,7 @@
 	"title": "Use DynamoDB for storage",
 	"tags": [],
 	"description": "",
-	"content": "Firewall in VPC In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.\nContents Create DynamoDB tables Create some sample data in DynamoDB Update Lambda policy to access DynamoDB tables Read a conversation from Dynamo DB Read conversation list from DynamoDB Write new messages to DynamoDB "
+	"content": "Contents Create DynamoDB tables Create some sample data in DynamoDB Update Lambda policy to access DynamoDB tables Read a conversation from Dynamo DB Read conversation list from DynamoDB Write new messages to DynamoDB "
 },
 {
 	"uri": "//localhost:1313/5-break/",
@@ -193,14 +193,14 @@
 	"title": "Read conversation list from DynamoDB",
 	"tags": [],
 	"description": "",
-	"content": "\n"
+	"content": " At S3 Bucket Choose Upload Choose Add files Go to v6 folder Choose site file and add to upload Choose Grant public-read acccess Choose I understand Choose Upload At Lambda function Copy this code and paste it echo \u0026#34;code\u0026#34; Choose Deploy Choose Test and check results Check again with browser "
 },
 {
 	"uri": "//localhost:1313/3-api/3.5-cors/",
 	"title": "Understand and Setup CORS",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Choose /{proxy+} Choose Enable CORS At the CORS interface Choose Default 4xx Choose Default 5xx Choose Save "
 },
 {
 	"uri": "//localhost:1313/6-identity/",
@@ -214,7 +214,7 @@
 	"title": "Calling the API from the website",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Choose Deploy API At the Deploy API interface Stage: New stage Stage name: prod Choose Deploy Copy Invoke URL Paste the URL into the browser and see the results Paste the URL into the configuration file At the S3 interface Choose Upload Choose add files Choose folder v3 Drag and drop the file to the correct path s3://chat-app-lab/js/ "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.6-verify/",
@@ -228,7 +228,7 @@
 	"title": "Write new messages to DynamoDB",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At lambda function Choose configure test event Choose Edit saved event Event JSON { \u0026#34;httpMethod\u0026#34;: \u0026#34;GET\u0026#34;, \u0026#34;pathParameters\u0026#34;: { \u0026#34;proxy\u0026#34;: \u0026#34;conversations/1\u0026#34; } } Choose Save Choose Test and check results Change Event JSON { \u0026#34;httpMethod\u0026#34;: \u0026#34;POST\u0026#34;, \u0026#34;body\u0026#34;: \u0026#34;This is new message\u0026#34;, \u0026#34;pathParameters\u0026#34;: { \u0026#34;proxy\u0026#34;: \u0026#34;conversations/1\u0026#34; } } Choose Save and Test Or Invoke Go to DynamoDB tables and check new item Check again with browser This is new items At S3 Bucket Choose Upload Choose Add files Go to site folder in v7 folder Add all file to upload Choose Grant public-read acccess Choose I understand Choose Upload Check with browser Type new message "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.7-login-logout/",

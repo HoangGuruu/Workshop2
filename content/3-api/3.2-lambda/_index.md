@@ -6,26 +6,22 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
+1. At AWS Console
+- Choose Lambda
 ![](../../WorkShop2/03.api/3.2.lambda/50.png?featherlight=false&width=90pc)
+2. At the create function interface
+- Choose author from scratch
+- Function name: Lambda-ChatApp-Proxy 
 ![](../../WorkShop2/03.api/3.2.lambda/51.png?featherlight=false&width=90pc)
+- Choose Runtime: Nodejs 18.x 
+- Choose Create function
 ![](../../WorkShop2/03.api/3.2.lambda/52.png?featherlight=false&width=90pc)
+- Use the created role: Lambda-Role-ChatApp
 ![](../../WorkShop2/03.api/3.2.lambda/53.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.2.lambda/54.png?featherlight=false&width=90pc)
+3. Enter the code for the function Copy the code and paste it into index.js
+```php
+echo ("code");
+
+```
+- Choose Deploy
 ![](../../WorkShop2/03.api/3.2.lambda/55.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.3.lambda-test/57.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.3.lambda-test/58.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.3.lambda-test/59.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.3.lambda-test/60.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/62.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/63.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/64.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/65.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/66.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/67.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/68.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/69.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/70.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/71.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/72.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/73.png?featherlight=false&width=90pc)
-![](../../WorkShop2/03.api/3.4.lambda-api/74.png?featherlight=false&width=90pc)

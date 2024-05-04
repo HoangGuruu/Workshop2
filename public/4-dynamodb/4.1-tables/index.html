@@ -12,21 +12,21 @@
     <title>Create DynamoDB tables :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1714706648" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714706648" rel="stylesheet">
-    <link href="/css/hybrid.css?1714706648" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714706648" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714706648" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714706648" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714706648" rel="stylesheet">
-    <link href="/css/theme.css?1714706648" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714706648" rel="stylesheet">
+    <link href="/css/nucleus.css?1714841914" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714841914" rel="stylesheet">
+    <link href="/css/hybrid.css?1714841914" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714841914" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714841914" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714841914" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714841914" rel="stylesheet">
+    <link href="/css/theme.css?1714841914" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714841914" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714706648" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714841914" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714706648"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714841914"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714706648"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714706648"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714841914"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714841914"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714706648"></script>
+<script type="text/javascript" src="/js/search.js?1714841914"></script>
 
     
   </div>
@@ -1344,15 +1344,52 @@
 
 
 
-	<p><img src="../../WorkShop2/04.dynamodb/4.1.tables/89.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/90.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/91.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/92.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/93.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/94.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/95.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/96.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/04.dynamodb/4.1.tables/97.png?featherlight=false&width=90pc"></p>
+	<ol>
+<li>At the AWS Console interface</li>
+</ol>
+<ul>
+<li>Choose DynamoDB
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/89.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="2">
+<li>Choose Create table
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/90.png?featherlight=false&width=90pc"></li>
+<li>At the DynamoDB Table interface</li>
+</ol>
+<ul>
+<li>Table name: Chat-Messages</li>
+<li>Partition key: ConversationId</li>
+<li>Sort key: Timestamp
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/91.png?featherlight=false&width=90pc"></li>
+<li>Choose Create table
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/92.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="4">
+<li>Choose create table to create the second table
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/93.png?featherlight=false&width=90pc"></li>
+<li>At the table creation interface</li>
+</ol>
+<ul>
+<li>Table name : Chat-Conversations</li>
+<li>Partition key: ConversationId</li>
+<li>Sort key: Username
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/94.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="6">
+<li>Scroll down and Choose Create global index
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/95.png?featherlight=false&width=90pc"></li>
+<li>At the GSI interface</li>
+</ol>
+<ul>
+<li>Partition key : User name</li>
+<li>Sort key: ConversationId</li>
+<li>Choose Create index
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/96.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="8">
+<li>Choose Create table
+<img src="../../WorkShop2/04.dynamodb/4.1.tables/97.png?featherlight=false&width=90pc"></li>
+</ol>
 
 
 
@@ -2022,19 +2059,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714706648"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714706648"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714706648"></script>
-    <script src="/js/jquery.sticky.js?1714706648"></script>
-    <script src="/js/featherlight.min.js?1714706648"></script>
-    <script src="/js/highlight.pack.js?1714706648"></script>
+    <script src="/js/clipboard.min.js?1714841914"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714841914"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714841914"></script>
+    <script src="/js/jquery.sticky.js?1714841914"></script>
+    <script src="/js/featherlight.min.js?1714841914"></script>
+    <script src="/js/highlight.pack.js?1714841914"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714706648"></script>
-    <script src="/js/learn.js?1714706648"></script>
-    <script src="/js/hugo-learn.js?1714706648"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714841914"></script>
+    <script src="/js/learn.js?1714841914"></script>
+    <script src="/js/hugo-learn.js?1714841914"></script>
 
-    <link href="/mermaid/mermaid.css?1714706648" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714706648"></script>
+    <link href="/mermaid/mermaid.css?1714841914" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714841914"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

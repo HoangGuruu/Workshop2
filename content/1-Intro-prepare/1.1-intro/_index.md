@@ -7,3 +7,10 @@ pre : " <b> 1.1 </b> "
 ---
 
 ![](../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
+
+### S3
+### API Gateway
+### Lambda
+### DynamoDB
+### Cognito
+### Cloudfront

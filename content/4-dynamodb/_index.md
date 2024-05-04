@@ -6,11 +6,6 @@ chapter : false
 pre : " <b> 4. </b> "
 ---
 
-## Firewall in VPC
-
-In this section, we will learn about the basic security features in Amazon VPC, such as the Security Group firewall feature and Network Access Control Lists.
-
-
 
 ### Contents
 
