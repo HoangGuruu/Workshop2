@@ -12,21 +12,21 @@
     <title>List Users in the API :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1714892149" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714892149" rel="stylesheet">
-    <link href="/css/hybrid.css?1714892149" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714892149" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714892149" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714892149" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714892149" rel="stylesheet">
-    <link href="/css/theme.css?1714892149" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714892149" rel="stylesheet">
+    <link href="/css/nucleus.css?1714914332" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714914332" rel="stylesheet">
+    <link href="/css/hybrid.css?1714914332" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714914332" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714914332" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714914332" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714914332" rel="stylesheet">
+    <link href="/css/theme.css?1714914332" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714914332" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714892149" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714914332" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714892149"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714914332"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714892149"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714892149"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714914332"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714914332"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714892149"></script>
+<script type="text/javascript" src="/js/search.js?1714914332"></script>
 
     
   </div>
@@ -1344,40 +1344,216 @@
 
 
 
-	<p><img src="../../WorkShop2/06.identity/6.2.users-api/287.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/288.png?featherlight=false&width=50pc">
+	<ol>
+<li>At IAM Interface</li>
+</ol>
+<ul>
+<li>Choose Create policy
+<img src="../../WorkShop2/06.identity/6.2.users-api/287.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="2">
+<li>Choose JSON</li>
+</ol>
+<ul>
+<li>Copy policy and paste it</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Statement&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Sid&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;VisualEditor0&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Effect&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cognito-idp:ListUsers&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;Resource&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;arn:aws:cognito-idp:&lt;your region&gt;:&lt;account id&gt;:userpool/&lt;user pool id&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="../../WorkShop2/06.identity/6.2.users-api/288.png?featherlight=false&width=50pc">
+3. Policy name: Lambda-User-Pool-ChatApp
 <img src="../../WorkShop2/06.identity/6.2.users-api/289.png?featherlight=false&width=50pc">
+4. Choose Create policy
 <img src="../../WorkShop2/06.identity/6.2.users-api/290.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/291.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/292.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/293.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/294.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/295.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/296.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/297.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/298.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/299.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/300.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/301.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/302.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/303.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/304.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/305.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/306.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/307.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/308.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/309.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/310.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/311.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/312.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/313.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/314.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/315.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/316.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/317.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/318.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/319.png?featherlight=false&width=50pc">
-<img src="../../WorkShop2/06.identity/6.2.users-api/320.png?featherlight=false&width=50pc"></p>
+5. At IAM Interface</p>
+<ul>
+<li>Find Role: Lambda-Role-ChatApp
+<img src="../../WorkShop2/06.identity/6.2.users-api/291.png?featherlight=false&width=50pc"></li>
+<li>Choose Add permissions</li>
+<li>Choose Attach policies
+<img src="../../WorkShop2/06.identity/6.2.users-api/292.png?featherlight=false&width=50pc"></li>
+<li>Find policy: Lambda-User-Pool-ChatApp</li>
+<li>Choose: Add permissions
+<img src="../../WorkShop2/06.identity/6.2.users-api/293.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="6">
+<li>At IAM Interface</li>
+</ol>
+<ul>
+<li>Choose Create Role
+<img src="../../WorkShop2/06.identity/6.2.users-api/294.png?featherlight=false&width=50pc"></li>
+<li>Choose Service: Lambda</li>
+<li>Choose Next
+<img src="../../WorkShop2/06.identity/6.2.users-api/295.png?featherlight=false&width=50pc"></li>
+<li>Add permission: Lamda-User-Pool-ChatApp
+<img src="../../WorkShop2/06.identity/6.2.users-api/296.png?featherlight=false&width=50pc"></li>
+<li>Add permission: AWSLambdaBasicExecutionRole
+<img src="../../WorkShop2/06.identity/6.2.users-api/297.png?featherlight=false&width=50pc"></li>
+<li>Role-name: Lambda-Cognito
+<img src="../../WorkShop2/06.identity/6.2.users-api/298.png?featherlight=false&width=50pc"></li>
+<li>Choose Create Role
+<img src="../../WorkShop2/06.identity/6.2.users-api/299.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="7">
+<li>At Lambda function</li>
+</ol>
+<ul>
+<li>Choose Create function</li>
+<li>Function name: Chat-User-GET</li>
+<li>Runtime: Node.js 18.x
+<img src="../../WorkShop2/06.identity/6.2.users-api/300.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="8">
+<li>Using an existing role: Lambda-Cognito</li>
+</ol>
+<ul>
+<li>Create function
+<img src="../../WorkShop2/06.identity/6.2.users-api/301.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="9">
+<li>Copy this code and paste it</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">import</span> {<span style="color:#a6e22e">CognitoIdentityProviderClient</span>, <span style="color:#a6e22e">paginateListUsers</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@aws-sdk/client-cognito-identity-provider&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">cognito</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CognitoIdentityProviderClient</span>({});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">export</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">handler</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">paginator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">paginateListUsers</span>({<span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">cognito</span>}, {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">UserPoolId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;user pool id&gt;&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">AttributesToGet</span><span style="color:#f92672">:</span> [],
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Filter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Limit</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">let</span> <span style="color:#a6e22e">logins</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">await</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">page</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">paginator</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">user</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">page</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Users</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">logins</span><span style="color:#f92672">.</span><span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">user</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Username</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">logins</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><ul>
+<li>Choose Deploy</li>
+</ul>
+<ol start="10">
+<li>At ChatPool</li>
+</ol>
+<ul>
+<li>Check User pool ID</li>
+<li>Check ARN
+<img src="../../WorkShop2/06.identity/6.2.users-api/303.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="11">
+<li>At API interface</li>
+</ol>
+<ul>
+<li>Choose Models</li>
+<li>Choose create model</li>
+<li>Name: userList</li>
+<li>Content type: application/json
+<img src="../../WorkShop2/06.identity/6.2.users-api/304.png?featherlight=false&width=50pc"></li>
+<li>Model schema</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;array&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;items&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;string&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Choose Create
+<img src="../../WorkShop2/06.identity/6.2.users-api/305.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="12">
+<li>At API interface</li>
+</ol>
+<ul>
+<li>Choose Create resource</li>
+<li>Resource path: /</li>
+<li>Resource name: users</li>
+<li>Choose Create resource
+<img src="../../WorkShop2/06.identity/6.2.users-api/306.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="13">
+<li>Choose Create Method</li>
+</ol>
+<ul>
+<li>Method: GET</li>
+<li>Lambda function
+<img src="../../WorkShop2/06.identity/6.2.users-api/307.png?featherlight=false&width=50pc"></li>
+<li>Lambda function: Chat-User-GET</li>
+<li>Choose Create method
+<img src="../../WorkShop2/06.identity/6.2.users-api/308.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="14">
+<li>Choose Create Method request</li>
+</ol>
+<ul>
+<li>Choose Edit
+<img src="../../WorkShop2/06.identity/6.2.users-api/309.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="15">
+<li>At Response body</li>
+</ol>
+<ul>
+<li>Content type: application/json</li>
+<li>Model: userList
+<img src="../../WorkShop2/06.identity/6.2.users-api/310.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="16">
+<li>Choose Test
+<img src="../../WorkShop2/06.identity/6.2.users-api/311.png?featherlight=false&width=50pc"></li>
+<li>Test
+<img src="../../WorkShop2/06.identity/6.2.users-api/312.png?featherlight=false&width=50pc"></li>
+<li>Check the results
+<img src="../../WorkShop2/06.identity/6.2.users-api/313.png?featherlight=false&width=50pc"></li>
+<li>At Users of ChatPool</li>
+</ol>
+<ul>
+<li>Choose Create user
+<img src="../../WorkShop2/06.identity/6.2.users-api/314.png?featherlight=false&width=50pc"></li>
+<li>Username: frank</li>
+<li>Choose Generate password</li>
+<li>Choose Create user
+<img src="../../WorkShop2/06.identity/6.2.users-api/315.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="20">
+<li>Do the same with brian</li>
+</ol>
+<ul>
+<li>Username: frank</li>
+<li>Choose Generate password</li>
+<li>Choose Create user
+<img src="../../WorkShop2/06.identity/6.2.users-api/316.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="21">
+<li>Test again and see the results
+<img src="../../WorkShop2/06.identity/6.2.users-api/317.png?featherlight=false&width=50pc"></li>
+<li>At API Gateway interface</li>
+</ol>
+<ul>
+<li>Choose Deploy API</li>
+<li>Stages: prod</li>
+<li>Choose Deploy
+<img src="../../WorkShop2/06.identity/6.2.users-api/318.png?featherlight=false&width=50pc"></li>
+</ul>
+<ol start="23">
+<li>Copy link of prod stage
+<img src="../../WorkShop2/06.identity/6.2.users-api/319.png?featherlight=false&width=50pc"></li>
+<li>Check with browser
+<img src="../../WorkShop2/06.identity/6.2.users-api/320.png?featherlight=false&width=50pc"></li>
+</ol>
 
 
 
@@ -2050,19 +2226,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714892149"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714892149"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714892149"></script>
-    <script src="/js/jquery.sticky.js?1714892149"></script>
-    <script src="/js/featherlight.min.js?1714892149"></script>
-    <script src="/js/highlight.pack.js?1714892149"></script>
+    <script src="/js/clipboard.min.js?1714914332"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714914332"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714914332"></script>
+    <script src="/js/jquery.sticky.js?1714914332"></script>
+    <script src="/js/featherlight.min.js?1714914332"></script>
+    <script src="/js/highlight.pack.js?1714914332"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714892149"></script>
-    <script src="/js/learn.js?1714892149"></script>
-    <script src="/js/hugo-learn.js?1714892149"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714914332"></script>
+    <script src="/js/learn.js?1714914332"></script>
+    <script src="/js/hugo-learn.js?1714914332"></script>
 
-    <link href="/mermaid/mermaid.css?1714892149" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714892149"></script>
+    <link href="/mermaid/mermaid.css?1714914332" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714914332"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

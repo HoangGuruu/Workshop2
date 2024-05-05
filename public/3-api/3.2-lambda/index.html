@@ -12,21 +12,21 @@
     <title>Code walkthrough of the first Lambda function :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1714892125" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714892125" rel="stylesheet">
-    <link href="/css/hybrid.css?1714892125" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714892125" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714892125" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714892125" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714892125" rel="stylesheet">
-    <link href="/css/theme.css?1714892125" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714892125" rel="stylesheet">
+    <link href="/css/nucleus.css?1714914332" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714914332" rel="stylesheet">
+    <link href="/css/hybrid.css?1714914332" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714914332" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714914332" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714914332" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714914332" rel="stylesheet">
+    <link href="/css/theme.css?1714914332" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714914332" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714892125" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714914332" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714892125"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714914332"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714892125"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714892125"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714914332"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714914332"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714892125"></script>
+<script type="text/javascript" src="/js/search.js?1714914332"></script>
 
     
   </div>
@@ -1367,7 +1367,37 @@
 <ol start="3">
 <li>Enter the code for the function Copy the code and paste it into index.js</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> (<span style="color:#e6db74">&#34;code&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">import</span> {<span style="color:#a6e22e">GetObjectCommand</span>, <span style="color:#a6e22e">S3Client</span>} <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@aws-sdk/client-s3&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">client</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">S3Client</span>({});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">bucket</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;your bucket name&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">export</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">handler</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">response</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">client</span><span style="color:#f92672">.</span><span style="color:#a6e22e">send</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">GetObjectCommand</span>({
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Bucket</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">bucket</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;data/conversations.json&#39;</span>
+</span></span><span style="display:flex;"><span>        }));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">done</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">JSON</span><span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">await</span> <span style="color:#a6e22e">response</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Body</span><span style="color:#f92672">.</span><span style="color:#a6e22e">transformToString</span>()));
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">done</span>(<span style="color:#a6e22e">e</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">done</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span><span style="color:#f92672">.</span><span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;400&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;200&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">JSON</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">err</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span><span style="color:#f92672">.</span><span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">res</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;Access-Control-Allow-Origin&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;*&#39;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>Choose Deploy
 <img src="../../WorkShop2/03.api/3.2.lambda/55.png?featherlight=false&width=50pc"></li>
@@ -2044,19 +2074,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714892125"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714892125"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714892125"></script>
-    <script src="/js/jquery.sticky.js?1714892125"></script>
-    <script src="/js/featherlight.min.js?1714892125"></script>
-    <script src="/js/highlight.pack.js?1714892125"></script>
+    <script src="/js/clipboard.min.js?1714914332"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714914332"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714914332"></script>
+    <script src="/js/jquery.sticky.js?1714914332"></script>
+    <script src="/js/featherlight.min.js?1714914332"></script>
+    <script src="/js/highlight.pack.js?1714914332"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714892125"></script>
-    <script src="/js/learn.js?1714892125"></script>
-    <script src="/js/hugo-learn.js?1714892125"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714914332"></script>
+    <script src="/js/learn.js?1714914332"></script>
+    <script src="/js/hugo-learn.js?1714914332"></script>
 
-    <link href="/mermaid/mermaid.css?1714892125" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714892125"></script>
+    <link href="/mermaid/mermaid.css?1714914332" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714914332"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

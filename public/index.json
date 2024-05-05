@@ -18,7 +18,7 @@
 	"title": "Create a user pool",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At AWS Console Choose Cognito At Cognito interface Choose Create user pool Choose User name Choose Email Choose Next Choose Cognito default Choose No MFA for this project Choose Email Only Choose Next Choose Next Choose Send email with Cognito Choose Next User pool name: ChatPool App client name: chatapp Only choose Read permission: email, email_verified Choose Create user pool "
 },
 {
 	"uri": "//localhost:1313/5-break/5.1-api/",
@@ -46,14 +46,14 @@
 	"title": "Introduction and Preparation",
 	"tags": [],
 	"description": "",
-	"content": "Diagram for this project Contents Introduction Setup the website "
+	"content": "Overall Our project is a chat application built on the AWS platform, combining technologies like Lambda, DynamoDB, and Cognito to create a powerful and secure chat experience. We started by setting up the website and integrating static data from Amazon S3.\nNext, we built an API using Lambda and API Gateway to manage dynamic data and user interactions. Using DynamoDB for data storage helps us build scalable and flexible applications. We also integrate user authentication and authorization by creating user pools in Cognito, ensuring security and efficient user management.\nFinally, optimization with CloudFront CDN enhances application performance and reliability. Thanks to this combination, we have created a powerful, flexible and secure chat application that provides the best user experience. Contents Introduction Setup the website "
 },
 {
 	"uri": "//localhost:1313/1-intro-prepare/1.1-intro/",
 	"title": "Introdution",
 	"tags": [],
 	"description": "",
-	"content": "\nS3 API Gateway Lambda DynamoDB Cognito Cloudfront "
+	"content": "\nLink Repository: https://github.com/HoangGuruu/ws2-chatapp.git S3 Amazon S3, also known as Simple Storage Service, is a powerful and flexible cloud storage service. In our project, we use S3 to store website static data and resources like images, CSS and JavaScript files. This helps us create a fast and high-performing website, with easy and affordable scalability.\nAPI Gateway Amazon API Gateway is a powerful API management service that allows us to easily create, manage, and deploy APIs to connect our applications to other services and users. In our project, API Gateway helps us build and manage API endpoints to access dynamic data from Lambda and DynamoDB.\nLambda AWS Lambda is a serverless compute service that allows us to run code without managing servers. We use Lambda in our projects to build small compute functions to handle business logic and access data in DynamoDB. This helps us optimize performance, flexibility and costs.\nDynamoDB Amazon DynamoDB is a flexible and automatically scalable NoSQL database service. In our project, we use DynamoDB to store dynamic data like chats and messages. With easy scalability and high performance, DynamoDB is ideal for dynamic data storage in our applications.\nCognito Amazon Cognito is a user authentication and authorization management service that helps us protect user information and manage access rights. In our project, we use Cognito to authenticate users, manage accounts, and control access to our APIs.\nCloudfront Amazon CloudFront is a CDN (Content Delivery Network) service managed by AWS that improves application performance and availability by delivering content to users from locations closest to them. In our project, we use CloudFront to deliver static data like images and CSS files to speed up page loading and improve user experience.\n"
 },
 {
 	"uri": "//localhost:1313/2-static-s3/2.2-access-data/",
@@ -88,7 +88,7 @@
 	"title": "List Users in the API",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At IAM Interface Choose Create policy Choose JSON Copy policy and paste it echo \u0026#34;code\u0026#34; 3. Policy name: Lambda-User-Pool-ChatApp 4. Choose Create policy 5. At IAM Interface\nFind Role: Lambda-Role-ChatApp Choose Add permissions Choose Attach policies Find policy: Lambda-User-Pool-ChatApp Choose: Add permissions At IAM Interface Choose Create Role Choose Service: Lambda Choose Next Add permission: Lamda-User-Pool-ChatApp Add permission: AWSLambdaBasicExecutionRole Role-name: Lambda-Cognito Choose Create Role At Lambda function Choose Create function Function name: Chat-User-GET Runtime: Node.js 18.x Using an existing role: Lambda-Cognito Create function Copy this code and paste it echo \u0026#34;code\u0026#34; Choose Deploy At ChatPool Check User pool ID Check ARN At API interface Choose Models Choose create model Name: userList Content type: application/json Model schema echo \u0026#34;code\u0026#34; Choose Create At API interface Choose Create resource Resource path: / Resource name: users Choose Create resource Choose Create Method Method: GET Lambda function Lambda function: Chat-User-GET Choose Create method Choose Create Method request Choose Edit At Response body Content type: application/json Model: userList Choose Test Test Check the results At Users of ChatPool Choose Create user Username: frank Choose Generate password Choose Create user Do the same with brian Username: frank Choose Generate password Choose Create user Test again and see the results At API Gateway interface Choose Deploy API Stages: prod Choose Deploy Copy link of prod stage Check with browser "
 },
 {
 	"uri": "//localhost:1313/1-intro-prepare/1.2-setup/",
@@ -123,7 +123,7 @@
 	"title": "List Users on the site",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At S3 Bucket Choose Upload Choose Add files Go to Site folder in v10 folder Choose All and drop to upload Grant piblic-read-access Choose I understand the risk Choose Upload At Stages of API Choose Actions Choose Generate SDK Platform: Javascript Choose Generate SDK At S3 Bucket Choose Upload Choose Add files Choose sdk file unziped Grant piblic-read-access Choose I understand the risk Choose Upload Choose /users at api gateway Choose Enable CORS Choose GET Choose Save Test with browser again "
 },
 {
 	"uri": "//localhost:1313/3-api/3.3-lambda-test/",
@@ -151,7 +151,7 @@
 	"title": "Create a new conversation",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At Lambda fuction Choose create function Function name: Chat-Conversation-POST Runtime: Node.js 18.x or Node.js 20.x Use an existing role: Lambda-Role-ChatApp Choose Create function Copy code and paste it echo \u0026#34;code\u0026#34; Choose deploy\nAt API interface Choose Models Choose Create model At model details interface Name: ConversationId Content type: application/json Model schema {\u0026#34;type\u0026#34;: \u0026#34;string\u0026#34;} Choose Create At model details interface Name: NewConversation Content type: application/json Model schema {\u0026#34;type\u0026#34;: \u0026#34;string\u0026#34;} Choose Create At API gateway Choose /conversations Choose Create method Choose POST Choose Lambda function Choose Lambda function : Chat-Conversation-POST Choose POST method in /conversations Choose Method request Choose Edit\nAt Request body Content type: application/json Model: NewConversation Choose Save\nChoose POST method in /conversations Choose Method response Choose Edit At Request body Content type: application/json Model: ConversationId Choose Save Choose POST method in /conversations Choose Integration request Choose Edit Content type: application/json Template body echo \u0026#34;code\u0026#34; Choose Save\nChoose /conversations Choose Enable CORS Choose GET Choose OPTIONS Choose POST Choose Save At API Gateway Choose Deploy stage prod again And choose generate SDK Platform: Javascript Choose GenerateSDK At S3 Bucket Choose Upload Choose Add files Choose folder sdk unziped and drop to upload\nGrant public-read access Choose I understand Choose Upload At S3 Bucket Choose Upload Choose Add files Go to v11 folder Choose site.js and drop it\nGrant public-read access Choose I understand Choose Upload Test with browser Start a new conversation Test with new messages "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.4-read-conversation/",
@@ -186,7 +186,7 @@
 	"title": "Create sign up page",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At User Pool Go to App client and copy ClienID Change information echo \u0026#34;code\u0026#34; Prepare amazon-cognito-identity.js for this project Steps With available file At S3 Bucket Choose Upload Choose Add files Choose amazon-cognito-identity.js and drop it to upload Choose all in folder site in v12 and drop it to upload Grant public-read access Choose I understand Choose Upload Check with browser Access ../signup.html Type necessary information and Choose sign up Check email Check user in Chat-Pool Choose username has just created Choose Actions Choose Confirm account Choose Confirm Check user is confirmed "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.5-read-conversation-list/",
@@ -221,7 +221,7 @@
 	"title": "Create verification page",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At S3 Bucket Choose Upload Choose Add files Choose all in folder site in v13 and drop it to upload Grant public-read access Choose I understand Choose Upload Check signup again with new username Check Code Check in email Use code in email to signup Check user hoang has just been confirmed "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.6-new-mesages/",
@@ -235,7 +235,7 @@
 	"title": "Add login and logout",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At S3 Bucket Choose Upload Choose Add files Choose all in folder site in v14 and drop it to upload Grant public-read access Choose I understand Choose Upload Sign in with username : Hoang Start new chat conversation "
 },
 {
 	"uri": "//localhost:1313/7-optimization-cdn/",
@@ -249,7 +249,7 @@
 	"title": "Add a Cognito authorizer to the API Gateway",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At API Gateway Choose Authorizers Choose Create an authorizer At authorizer interface Authorizer name: Cognito Type: Cognito Cognito user pool: ChatPool Token source: Authorization Choose Create authorizer Check new authorizer At API gateway Choose GET in /conversations Choose Method request Choose Edit Authorization: Cognito At API gateway Choose GET in /conversations Choose Integration request Choose Edit Template body echo \u0026#34;code\u0026#34; Choose Save Choose Save At API gateway Choose POST in /conversations Choose Method request Choose Edit Authorization: Cognito At API gateway Choose POST in /conversations Choose Integration request Choose Edit Template body echo \u0026#34;code\u0026#34; Choose Save At API gateway Choose POST in /{id} Choose Method request Choose Edit Authorization: Cognito Choose Save At API gateway Choose POST in /{id} Choose Integration request Choose Edit Template body echo \u0026#34;code\u0026#34; Choose Save At API gateway Choose GET in /{id} Choose Method request Choose Edit Authorization: Cognito Choose Save At API gateway Choose GET in /{id} Choose Integration request Choose Edit Template body echo \u0026#34;code\u0026#34; Choose Save At API gateway Choose GET in /users Choose Method request Choose Edit Authorization: Cognito Choose Save At API gateway Choose GET in /users Choose Integration request Choose Edit Template body echo \u0026#34;code\u0026#34; Choose Save "
 },
 {
 	"uri": "//localhost:1313/8-clear/",
@@ -263,7 +263,7 @@
 	"title": "Results",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At API Gateway Choose Action Choose Deploy API Stages: prod Choose Deploy At stages Choose Stage actions Choose Generate SDK Generate SDK Platform: Javascript Choose: Generate SDK At S3 Bucket Choose Upload Choose Add files Choose sdk file unzipped and drop it to upload Grant public-read access Choose I understand Choose Upload At S3 Bucket Choose Upload Choose Add files Choose all file in folder site in folder v15 and drop it to upload Grant public-read access Choose I understand Choose Upload Sign in with user picard Start a new chat Start a new chat with hoang user Test with new messages Access Hoang Account and reply Chat again "
 },
 {
 	"uri": "//localhost:1313/categories/",

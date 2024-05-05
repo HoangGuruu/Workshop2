@@ -17,12 +17,62 @@ pre : " <b> 5.2 </b> "
 ![](../../WorkShop2/05.break/5.2.lambda/178.png?featherlight=false&width=50pc)
 3. Copy code and paste it
 ```php
-echo " code "
+import {DynamoDBClient, paginateQuery} from '@aws-sdk/client-dynamodb';
+
+const client = new DynamoDBClient({});
+
+export const handler = async function (event) {
+    let messages = [];
+    const paginator = paginateQuery({client: client}, {
+        TableName: 'Chat-Messages',
+        ProjectionExpression: '#T, Sender, Message',
+        ExpressionAttributeNames: {'#T': 'Timestamp'},
+        KeyConditionExpression: 'ConversationId = :id',
+        ExpressionAttributeValues: {':id': {S: event.id}}
+    });
+
+    for await (const page of paginator) {
+        for (const message of page.Items) {
+            messages.push({
+                sender: message.Sender.S,
+                time: Number(message.Timestamp.N),
+                message: message.Message.S
+            });
+        }
+    }
+    return loadConversationDetail(event.id, messages);
+}
+
+async function loadConversationDetail(id, messages) {
+    const paginator = paginateQuery({client: client}, {
+        TableName: 'Chat-Conversations',
+        Select: 'ALL_ATTRIBUTES',
+        KeyConditionExpression: 'ConversationId = :id',
+        ExpressionAttributeValues: {':id': {S: id}}
+    });
+
+    let participants = [];
+
+    for await (const page of paginator) {
+        for (const item of page.Items) {
+            participants.push(item.Username.S);
+        }
+    }
+
+    return {
+        id: id,
+        participants: participants,
+        last: messages.length > 0 ? messages[messages.length - 1].time : undefined,
+        messages: messages
+    }
+}
+
+
 ```
 - Choose Deploy
 4. At Lambda function
 - Choose Create function
-- Function name: Chat-Messages-GET
+- Function name: Chat-Messages-POÓT
 - Runtime: Node.js 18.x
 ![](../../WorkShop2/05.break/5.2.lambda/180.png?featherlight=false&width=50pc)
 - Use an existing role : Lambda-Role-ChatApp
@@ -30,7 +80,24 @@ echo " code "
 ![](../../WorkShop2/05.break/5.2.lambda/181.png?featherlight=false&width=50pc)
 5. Copy code and paste it
 ```php
-echo " code "
+import {DynamoDBClient, PutItemCommand} from '@aws-sdk/client-dynamodb';
+
+const client = new DynamoDBClient({});
+
+export const handler = async function (event) {
+    await client.send(new PutItemCommand({
+        TableName: 'Chat-Messages',
+        Item: {
+            ConversationId: {S: event.id},
+            Timestamp: {
+                N: "" + new Date().getTime()
+            },
+            Message: {S: event.message},
+            Sender: {S: 'Student'}
+        }
+    }));
+};
+
 ```
 - Choose Deploy
 
@@ -67,7 +134,42 @@ echo " code "
 - Content type: application/json
 - Model schema
 ```php
-echo "code"
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last": {
+      "type": "number",
+      "format": "utc-millisec"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sender": {
+            "type": "string"
+          },
+          "time": {
+            "type": "number",
+            "format": "utc-millisec"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
 ```
 ![](../../WorkShop2/05.break/5.2.lambda/192.png?featherlight=false&width=50pc)
 - Choose Create
@@ -81,7 +183,9 @@ echo "code"
 ![](../../WorkShop2/05.break/5.2.lambda/195.png?featherlight=false&width=50pc)
 - Model schema
 ```php
-echo "code"
+{
+  "type": "string"
+}
 ```
 - Choose Create
 ![](../../WorkShop2/05.break/5.2.lambda/197.png?featherlight=false&width=50pc)
@@ -96,7 +200,10 @@ echo "code"
 - Content type: application/json
 - Template body
 ```php
-echo "code"
+#set($inputRoot = $input.path('$'))
+{
+    "id": "$input.params('id')"
+}
 ```
 
 ![](../../WorkShop2/05.break/5.2.lambda/200.png?featherlight=false&width=50pc)
@@ -133,7 +240,11 @@ echo "code"
 ![](../../WorkShop2/05.break/5.2.lambda/209.png?featherlight=false&width=50pc)
 - Template body
 ```php
-echo "code"
+#set($inputRoot = $input.path('$'))
+{
+    "id": "$input.params('id')",
+    "message": "$inputRoot"
+}
 ```
 ![](../../WorkShop2/05.break/5.2.lambda/210.png?featherlight=false&width=50pc)
 - Choose Save
