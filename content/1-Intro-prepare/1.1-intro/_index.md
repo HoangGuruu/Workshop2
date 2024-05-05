@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 1.1 </b> "
 ---
 
-![](../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
+![](../../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
 
 #### Link Repository: 
 https://github.com/HoangGuruu/ws2-chatapp.git
