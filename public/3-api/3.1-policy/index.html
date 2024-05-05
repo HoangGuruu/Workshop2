@@ -12,21 +12,21 @@
     <title>Creating a policy for the Lambda function :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1714876685" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714876685" rel="stylesheet">
-    <link href="/css/hybrid.css?1714876685" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714876685" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714876685" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714876685" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714876685" rel="stylesheet">
-    <link href="/css/theme.css?1714876685" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714876685" rel="stylesheet">
+    <link href="/css/nucleus.css?1714892121" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714892121" rel="stylesheet">
+    <link href="/css/hybrid.css?1714892121" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714892121" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714892121" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714892121" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714892121" rel="stylesheet">
+    <link href="/css/theme.css?1714892121" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714892121" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714876685" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714892121" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714876685"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714892121"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714876685"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714876685"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714892121"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714892121"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714876685"></script>
+<script type="text/javascript" src="/js/search.js?1714892121"></script>
 
     
   </div>
@@ -1346,13 +1346,13 @@
 
 	<ol>
 <li>Access IAM
-<img src="../../WorkShop2/03.api/3.1.policy/33.png?featherlight=false&width=90pc"></li>
+<img src="../../WorkShop2/03.api/3.1.policy/33.png?featherlight=false&width=50pc"></li>
 <li>At the IAM interface</li>
 </ol>
 <ul>
 <li>Choose Policies</li>
 <li>Choose Create policy
-<img src="../../WorkShop2/03.api/3.1.policy/34.png?featherlight=false&width=90pc"></li>
+<img src="../../WorkShop2/03.api/3.1.policy/34.png?featherlight=false&width=50pc"></li>
 </ul>
 <ol start="3">
 <li>At the Policy interface</li>
@@ -1360,51 +1360,51 @@
 <ul>
 <li>Choose service: S3</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/35.png?featherlight=false&width=90pc"></p>
+<p><img src="../../WorkShop2/03.api/3.1.policy/35.png?featherlight=false&width=50pc"></p>
 <ul>
 <li>Choose Actions allowed: GetObject</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/36.png?featherlight=false&width=90pc"></p>
+<p><img src="../../WorkShop2/03.api/3.1.policy/36.png?featherlight=false&width=50pc"></p>
 <ul>
 <li>Choose Resource: Specific</li>
 <li>Add ARNs</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/37.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/37.png?featherlight=false&width=50pc">
 4. At the ARN interface</p>
 <ul>
 <li>Name bucket: chat-app-lab</li>
 <li>Object name: *</li>
 <li>Choose Add ARNs</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/38.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/38.png?featherlight=false&width=50pc">
 5. Name the Policy</p>
 <ul>
 <li>Policy name : S3-Access-ChatApp</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/39.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/39.png?featherlight=false&width=50pc">
 6. Choose Create policy</p>
-<p><img src="../../WorkShop2/03.api/3.1.policy/40.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/40.png?featherlight=false&width=50pc">
 7. At the IAM interface</p>
 <ul>
 <li>Choose Roles</li>
 <li>Choose Create role</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/41.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/41.png?featherlight=false&width=50pc">
 8. Choose AWS Service</p>
-<p><img src="../../WorkShop2/03.api/3.1.policy/42.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/42.png?featherlight=false&width=50pc">
 9. Choose Lambda service</p>
 <ul>
 <li>Choose Next</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/43.png?featherlight=false&width=90pc">
+<p><img src="../../WorkShop2/03.api/3.1.policy/43.png?featherlight=false&width=50pc">
 10. At Add permissions</p>
 <ul>
 <li>Find and Choose S3-Access-ChatApp
-<img src="../../WorkShop2/03.api/3.1.policy/44.png?featherlight=false&width=90pc"></li>
+<img src="../../WorkShop2/03.api/3.1.policy/44.png?featherlight=false&width=50pc"></li>
 <li>Find and Choose AWSLambdaBasicExecutionRole
-<img src="../../WorkShop2/03.api/3.1.policy/45.png?featherlight=false&width=90pc"></li>
+<img src="../../WorkShop2/03.api/3.1.policy/45.png?featherlight=false&width=50pc"></li>
 <li>Choose Next
-<img src="../../WorkShop2/03.api/3.1.policy/46.png?featherlight=false&width=90pc"></li>
+<img src="../../WorkShop2/03.api/3.1.policy/46.png?featherlight=false&width=50pc"></li>
 </ul>
 <ol start="11">
 <li>At Name, review and create</li>
@@ -1412,10 +1412,10 @@
 <ul>
 <li>Role name: Lambda-Role</li>
 </ul>
-<p><img src="../../WorkShop2/03.api/3.1.policy/47.png?featherlight=false&width=90pc"></p>
+<p><img src="../../WorkShop2/03.api/3.1.policy/47.png?featherlight=false&width=50pc"></p>
 <ul>
 <li>Choose Create role
-<img src="../../WorkShop2/03.api/3.1.policy/48.png?featherlight=false&width=90pc"></li>
+<img src="../../WorkShop2/03.api/3.1.policy/48.png?featherlight=false&width=50pc"></li>
 </ul>
 
 
@@ -2086,19 +2086,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714876685"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714876685"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714876685"></script>
-    <script src="/js/jquery.sticky.js?1714876685"></script>
-    <script src="/js/featherlight.min.js?1714876685"></script>
-    <script src="/js/highlight.pack.js?1714876685"></script>
+    <script src="/js/clipboard.min.js?1714892121"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714892121"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714892121"></script>
+    <script src="/js/jquery.sticky.js?1714892121"></script>
+    <script src="/js/featherlight.min.js?1714892121"></script>
+    <script src="/js/highlight.pack.js?1714892121"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714876685"></script>
-    <script src="/js/learn.js?1714876685"></script>
-    <script src="/js/hugo-learn.js?1714876685"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714892121"></script>
+    <script src="/js/learn.js?1714892121"></script>
+    <script src="/js/hugo-learn.js?1714892121"></script>
 
-    <link href="/mermaid/mermaid.css?1714876685" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714876685"></script>
+    <link href="/mermaid/mermaid.css?1714892121" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714892121"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
