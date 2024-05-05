@@ -17,6 +17,7 @@ chapter : false
 ![](WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
 ![](../../../../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
 ![](../01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
+![](./WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
 #### Content
 
 1. [Introduction and Preparation](1-introduce/)
