@@ -12,21 +12,21 @@
     <title>Clear Resources  :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1714842356" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714842356" rel="stylesheet">
-    <link href="/css/hybrid.css?1714842356" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714842356" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714842356" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714842356" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714842356" rel="stylesheet">
-    <link href="/css/theme.css?1714842356" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714842356" rel="stylesheet">
+    <link href="/css/nucleus.css?1714881306" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714881306" rel="stylesheet">
+    <link href="/css/hybrid.css?1714881306" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714881306" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714881306" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714881306" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714881306" rel="stylesheet">
+    <link href="/css/theme.css?1714881306" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714881306" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714842356" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714881306" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714842356"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714881306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714842356"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714842356"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714881306"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714881306"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714842356"></script>
+<script type="text/javascript" src="/js/search.js?1714881306"></script>
 
     
   </div>
@@ -1338,33 +1338,143 @@
 
 
 
-	<p><img src="../WorkShop2/08.clear/r1(1).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(10).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(11).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(12).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(13).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(14).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(15).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(16).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(17).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(18).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(19).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(2).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(20).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(21).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(22).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(23).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(24).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(25).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(26).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(27).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(3).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(4).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(5).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(6).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(7).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(8).png?featherlight=false&width=90pc">
-<img src="../WorkShop2/08.clear/r1(9).png?featherlight=false&width=90pc"></p>
+	<ol>
+<li>At Cloudfront</li>
+</ol>
+<ul>
+<li>Choose this cloudfront has just created</li>
+<li>Choose Disable
+<img src="../WorkShop2/08.clear/r1(1).png?featherlight=false&width=90pc"></li>
+<li>Choose Disable
+<img src="../WorkShop2/08.clear/r1(2).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="2">
+<li>At Cognito</li>
+</ol>
+<ul>
+<li>Choose ChatPool</li>
+<li>Choose Delete user pool
+<img src="../WorkShop2/08.clear/r1(3).png?featherlight=false&width=90pc"></li>
+<li>Tick Deactivate deletion protection</li>
+<li>Type: ChatPool</li>
+<li>Choose: Delete
+<img src="../WorkShop2/08.clear/r1(4).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="3">
+<li>At lambda function</li>
+</ol>
+<ul>
+<li>Choose All lambda function</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(5).png?featherlight=false&width=90pc"></li>
+<li>Type: delete</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(6).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="4">
+<li>At API Gateway</li>
+</ol>
+<ul>
+<li>Choose API Action</li>
+<li>Choose delete API
+<img src="../WorkShop2/08.clear/r1(7).png?featherlight=false&width=90pc"></li>
+<li>Type: confirm</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(8).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="5">
+<li>At DynamoDB</li>
+</ol>
+<ul>
+<li>Choose all database</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(9).png?featherlight=false&width=90pc"></li>
+<li>Type confirm</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(10).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="6">
+<li>At DynamoDB</li>
+</ol>
+<ul>
+<li>Choose all database</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(11).png?featherlight=false&width=90pc"></li>
+<li>Type confirm</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(12).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="7">
+<li>At S3</li>
+</ol>
+<ul>
+<li>Choose chat-app-lab bucket</li>
+<li>Choose Empty
+<img src="../WorkShop2/08.clear/r1(13).png?featherlight=false&width=90pc"></li>
+<li>Type: permanently delete</li>
+<li>Choose Empty
+<img src="../WorkShop2/08.clear/r1(14).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="8">
+<li>At S3</li>
+</ol>
+<ul>
+<li>Choose chat-app-lab bucket</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(15).png?featherlight=false&width=90pc"></li>
+<li>Type: chat-app-lab</li>
+<li>Choose Delete Bucket
+<img src="../WorkShop2/08.clear/r1(16).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="9">
+<li>At IAM Interface</li>
+</ol>
+<ul>
+<li>Choose Roles</li>
+<li>Find: Lambda-Role-ChatApp
+<img src="../WorkShop2/08.clear/r1(17).png?featherlight=false&width=90pc"></li>
+<li>Find: Lambda-Cognito</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(18).png?featherlight=false&width=90pc"></li>
+<li>Type: delete</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(19).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="10">
+<li>At IAM Interface</li>
+</ol>
+<ul>
+<li>Choose Policies</li>
+<li>Find: Chat-S3-Access
+<img src="../WorkShop2/08.clear/r1(22).png?featherlight=false&width=90pc"></li>
+<li>Type: Chat-S3-Access</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(23).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="11">
+<li>At IAM Interface</li>
+</ol>
+<ul>
+<li>Choose Policies</li>
+<li>Find: Lambda-User-Pool-ChatApp</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(24).png?featherlight=false&width=90pc"></li>
+<li>Type: Lambda-User-Pool-ChatApp</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(25).png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="11">
+<li>At IAM Interface</li>
+</ol>
+<ul>
+<li>Choose Policies</li>
+<li>Find: Access-DynamoDB-ChatApp</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(26).png?featherlight=false&width=90pc"></li>
+<li>Type: Access-DynamoDB-ChatApp</li>
+<li>Choose Delete
+<img src="../WorkShop2/08.clear/r1(27).png?featherlight=false&width=90pc"></li>
+</ul>
 
 
 
@@ -2030,19 +2140,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714842356"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714842356"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714842356"></script>
-    <script src="/js/jquery.sticky.js?1714842356"></script>
-    <script src="/js/featherlight.min.js?1714842356"></script>
-    <script src="/js/highlight.pack.js?1714842356"></script>
+    <script src="/js/clipboard.min.js?1714881306"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714881306"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714881306"></script>
+    <script src="/js/jquery.sticky.js?1714881306"></script>
+    <script src="/js/featherlight.min.js?1714881306"></script>
+    <script src="/js/highlight.pack.js?1714881306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714842356"></script>
-    <script src="/js/learn.js?1714842356"></script>
-    <script src="/js/hugo-learn.js?1714842356"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714881306"></script>
+    <script src="/js/learn.js?1714881306"></script>
+    <script src="/js/hugo-learn.js?1714881306"></script>
 
-    <link href="/mermaid/mermaid.css?1714842356" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714842356"></script>
+    <link href="/mermaid/mermaid.css?1714881306" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714881306"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

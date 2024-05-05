@@ -25,7 +25,7 @@
 	"title": "Create API structure in API Gateway",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At API Interface Choose Models Choose Create Name: ConversationsList Content type: application/json Model schema: echo \u0026#34;code\u0026#34; Choose Create Choose /{proxy+} Choose Delete to create a new complete structure API Choose Delete Choose Create resourse Resource name: conversation Choose Create resource Then create next resource Resource path: /conversation/ Resource name: {id} Choose Create resource At Lambda Interface Choose Create function At function interface Function: Chat-Conversation-GET Runtime: Node.js 18.x Use an existing role Choose : Lambda-Role-ChatApp Choose Create fuction Copy code for this function and paste it echo \u0026#34;code\u0026#34; Choose Deploy Choose configure test event Choose Creat new event Event: TestConversation Event JSON: {} Choose Save Choose Test and check results At API interface Choose /conversations Choose Create method At method interface Method type: GET Integration type: Lambda function Choose Lambda function : Chat-Conversation-GET Choose Create method At API interface Choose Models Choose create model At models interface Name: ConversationsList Content type: application/json Model schema: echo \u0026#34;code\u0026#34; Choose Create Choose GET in /conversations Choose Method response Choose Edit At Edit interface - Response body Content type: application/json Model: ConversationsList Choose Save Choose Test and check results with GET Choose /converation Choose Enable CORS Choose GET Choose Save "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/4.1-tables/",
@@ -81,7 +81,7 @@
 	"title": "Lambda functions for reading and writing messages",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At Lambda function Choose Create function At Basic information Function name: Chat-Messages-GET Runtime: Node.js 18.x Use an existing role : Lambda-Role-ChatApp Choose Create function Copy code and paste it echo \u0026#34; code \u0026#34; Choose Deploy At Lambda function Choose Create function Function name: Chat-Messages-GET Runtime: Node.js 18.x Use an existing role : Lambda-Role-ChatApp Choose Create function Copy code and paste it echo \u0026#34; code \u0026#34; Choose Deploy 6. At API Interface\nChoose /{id} Choose Create method At Method details Method type: GET Integration type: Lambda function Choose lambda function: Chat-Messages-GET Choose create method At API Interface Choose /{id} Choose Create method At Method details Method type: POST Integration type: Lambda function Choose lambda function: Chat-Messages-POST Choose create method At API gateway Choose Models Choose Create models Name: Conversation Content type: application/json Model schema echo \u0026#34;code\u0026#34; Choose Create At API gateway Choose Models Choose Create models Name: newMessages Content type: application/json Model schema echo \u0026#34;code\u0026#34; Choose Create At API resource Choose GET in /{id} Choose Integration request Choose Edit Choose Mapping templates Choose Add mapping template Content type: application/json Template body echo \u0026#34;code\u0026#34; Choose Save Choose Test at GET in /{id} Test id: 1 Choose Test Check the results At API resource Choose GET in /{id} Choose Method response Choose Edit Update Response body Content type: application/json Model: Conversation Choose: Save At API resource Choose POST in /{id} Choose Integration request Choose Edit Choose Mapping templates Choose Add mapping template Content type: application/json Template body echo \u0026#34;code\u0026#34; Choose Save At API resource Choose POST in /{id} Choose Method request Choose Edit Update Response body Content type: application/json Model: newMessage Choose: Save Choose Test at POST in /{id} id: 1 Request body: test message Choose Test Check the results At API resource Choose POST in /{id} Choose Method response Choose Create response At response details HTTP status code: 204 Choose: Save At API resource Choose POST in /{id} Choose Method response Choose Delete Response 200 Choose Delete At API resource Choose POST in /{id} Choose Integration response Choose Delete Default - response Choose Delete At API resource Choose POST in /{id} Choose Integration response Choose Create response At response details Method response status code: 204 Choose: Create Choose Test at POST in /{id} id: 1 Request body: Test case Check the new status for POST Method Choose /{id} Choose Enable CORS At CORS interface Choose GET Choose POST Choose Save "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.2-users-api/",
@@ -116,7 +116,7 @@
 	"title": "Exporting a JavaScript client and Swagger",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At API Interface Choose Deploy API Stage: prod Choose Deploy At stages Choose stage actions Choose generate SDK Platform: Javascript Choose Generate SDK At S3 Bucket Choose Upload Choose Add files Extract file zip of sdk file Choose and drop this folder into ../js/ Grant public-read access Choose I understand Choose Upload At S3 Bucket Choose Upload Choose Add files Go to Site folder in folder v9 Choose all and drop to upload Grant public-read access Choose I understand Choose Upload Test with browser Send new messages Test wit 2nd conversation At Stages of API Choose stage actions\nChoose export Choose Swagger\nChoose YAML\nChoose Export API\nA file yaml will be downloaded Go to google and search Swagger Editor Access this website 10. Copy code in file into Editor\nCan see Any methods of this API Choose Try it out to test API See the results "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.3-users-site/",
@@ -165,7 +165,7 @@
 	"title": "Remove hard-coded user names from Lambda",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " Go to Chat-Conversation-GET lambda function Find: {S: 'Student'} Change it: {S: event.cognitoUsername} Choose Deploy Choose configure test At configure test event Edit saved event Event JSON { \u0026#34;cognitoUsername\u0026#34;: \u0026#34;Student\u0026#34; } Choose Save Check the results Go to Chat-Conversation-POST lambda function Find: {S: 'Student'} Change it: {S: event.cognitoUsername} Choose Deploy At API gateway Choose GET in /conversations Choose Integration request Choose Edit Mapping templates Content type: application/json Template body: { \u0026#34;cognitoUsername\u0026#34;: \u0026#34;Student\u0026#34; } Choose Save At API gateway Choose POST in /{id} Choose Integration request Choose Edit Mapping templates Content type: application/json Template body: { echo \u0026#34;code\u0026#34; \u0026#34;cognitoUsername\u0026#34;: \u0026#34;Student\u0026#34; } 9. At API Interface\nChoose Deploy API Stage: prod Choose Deploy At stages Choose stage actions Choose generate SDK Platform: Javascript Choose Generate SDK At S3 Bucket Choose Upload Choose Add files Extract file zip of sdk file Choose and drop this folder into ../js/ Grant public-read access Choose I understand Choose Upload Test again with browser chat-app remove harded-code "
 },
 {
 	"uri": "//localhost:1313/4-dynamodb/",
@@ -242,7 +242,7 @@
 	"title": "Optimization Setting up a CloudFront CDN",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At AWS Console Choose Cloudfront Choose Create a Cloudfront distribution Choose s3 bucket we have just created Choose Use website endpoint Check and leave default Check and leave default Default root object: index.html Choose Create distribution Copy distribution domain name Wait it deploy success and check with browser Check write function of this web "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.8-authorizer/",
@@ -256,7 +256,7 @@
 	"title": "Clear Resources ",
 	"tags": [],
 	"description": "",
-	"content": " "
+	"content": " At Cloudfront Choose this cloudfront has just created Choose Disable Choose Disable At Cognito Choose ChatPool Choose Delete user pool Tick Deactivate deletion protection Type: ChatPool Choose: Delete At lambda function Choose All lambda function Choose Delete Type: delete Choose Delete At API Gateway Choose API Action Choose delete API Type: confirm Choose Delete At DynamoDB Choose all database Choose Delete Type confirm Choose Delete At DynamoDB Choose all database Choose Delete Type confirm Choose Delete At S3 Choose chat-app-lab bucket Choose Empty Type: permanently delete Choose Empty At S3 Choose chat-app-lab bucket Choose Delete Type: chat-app-lab Choose Delete Bucket At IAM Interface Choose Roles Find: Lambda-Role-ChatApp Find: Lambda-Cognito Choose Delete Type: delete Choose Delete At IAM Interface Choose Policies Find: Chat-S3-Access Type: Chat-S3-Access Choose Delete At IAM Interface Choose Policies Find: Lambda-User-Pool-ChatApp Choose Delete Type: Lambda-User-Pool-ChatApp Choose Delete At IAM Interface Choose Policies Find: Access-DynamoDB-ChatApp Choose Delete Type: Access-DynamoDB-ChatApp Choose Delete "
 },
 {
 	"uri": "//localhost:1313/6-identity/6.9-results/",

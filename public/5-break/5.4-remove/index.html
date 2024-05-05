@@ -12,21 +12,21 @@
     <title>Remove hard-coded user names from Lambda :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1714842356" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1714842356" rel="stylesheet">
-    <link href="/css/hybrid.css?1714842356" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1714842356" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1714842356" rel="stylesheet">
-    <link href="/css/auto-complete.css?1714842356" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1714842356" rel="stylesheet">
-    <link href="/css/theme.css?1714842356" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1714842356" rel="stylesheet">
+    <link href="/css/nucleus.css?1714881306" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1714881306" rel="stylesheet">
+    <link href="/css/hybrid.css?1714881306" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1714881306" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1714881306" rel="stylesheet">
+    <link href="/css/auto-complete.css?1714881306" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1714881306" rel="stylesheet">
+    <link href="/css/theme.css?1714881306" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1714881306" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1714842356" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1714881306" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1714842356"></script>
+    <script src="/js/jquery-3.3.1.min.js?1714881306"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1714842356"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1714842356"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1714881306"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1714881306"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1714842356"></script>
+<script type="text/javascript" src="/js/search.js?1714881306"></script>
 
     
   </div>
@@ -1344,24 +1344,129 @@
 
 
 
-	<p><img src="../../WorkShop2/05.break/5.4.remove/255.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/256.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/257.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/258.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/259.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/260.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/261.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/262.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/263.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/264.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/265.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/266.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/267.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/268.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/269.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/270.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/271.png?featherlight=false&width=90pc">
-<img src="../../WorkShop2/05.break/5.4.remove/272.png?featherlight=false&width=90pc"></p>
+	<ol>
+<li>Go to Chat-Conversation-GET lambda function</li>
+</ol>
+<ul>
+<li>Find: <code>{S: 'Student'}</code>
+<img src="../../WorkShop2/05.break/5.4.remove/255.png?featherlight=false&width=90pc"></li>
+<li>Change it: <code>{S: event.cognitoUsername}</code></li>
+<li>Choose Deploy</li>
+<li>Choose configure test
+<img src="../../WorkShop2/05.break/5.4.remove/256.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="2">
+<li>At configure test event</li>
+</ol>
+<ul>
+<li>Edit saved event</li>
+<li>Event JSON</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;cognitoUsername&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Student&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Choose Save
+<img src="../../WorkShop2/05.break/5.4.remove/257.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="3">
+<li>Check the results
+<img src="../../WorkShop2/05.break/5.4.remove/258.png?featherlight=false&width=90pc"></li>
+<li>Go to Chat-Conversation-POST lambda function</li>
+</ol>
+<ul>
+<li>Find: <code>{S: 'Student'}</code>
+<img src="../../WorkShop2/05.break/5.4.remove/259.png?featherlight=false&width=90pc"></li>
+<li>Change it: <code>{S: event.cognitoUsername}</code></li>
+<li>Choose Deploy
+<img src="../../WorkShop2/05.break/5.4.remove/260.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="5">
+<li>At API gateway</li>
+</ol>
+<ul>
+<li>Choose GET in /conversations</li>
+<li>Choose Integration request</li>
+<li>Choose Edit
+<img src="../../WorkShop2/05.break/5.4.remove/261.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="6">
+<li>Mapping templates</li>
+</ol>
+<ul>
+<li>Content type: application/json</li>
+<li>Template body:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;cognitoUsername&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Student&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="../../WorkShop2/05.break/5.4.remove/262.png?featherlight=false&width=90pc"></p>
+<ul>
+<li>Choose Save
+<img src="../../WorkShop2/05.break/5.4.remove/263.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="7">
+<li>At API gateway</li>
+</ol>
+<ul>
+<li>Choose POST in /{id}</li>
+<li>Choose Integration request</li>
+<li>Choose Edit
+<img src="../../WorkShop2/05.break/5.4.remove/264.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="8">
+<li>Mapping templates</li>
+</ol>
+<ul>
+<li>Content type: application/json</li>
+<li>Template body:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;code&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;cognitoUsername&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Student&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="../../WorkShop2/05.break/5.4.remove/265.png?featherlight=false&width=90pc">
+9. At API Interface</p>
+<ul>
+<li>Choose Deploy API</li>
+<li>Stage: prod</li>
+<li>Choose Deploy
+<img src="../../WorkShop2/05.break/5.4.remove/266.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="10">
+<li>At stages</li>
+</ol>
+<ul>
+<li>Choose stage actions</li>
+<li>Choose generate SDK
+<img src="../../WorkShop2/05.break/5.4.remove/267.png?featherlight=false&width=90pc"></li>
+<li>Platform: Javascript</li>
+<li>Choose Generate SDK
+<img src="../../WorkShop2/05.break/5.4.remove/268.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="11">
+<li>At S3 Bucket</li>
+</ol>
+<ul>
+<li>Choose Upload</li>
+<li>Choose Add files
+<img src="../../WorkShop2/05.break/5.4.remove/269.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="12">
+<li>Extract file zip of sdk file</li>
+</ol>
+<ul>
+<li>Choose and drop this folder into ../js/
+<img src="../../WorkShop2/05.break/5.4.remove/270.png?featherlight=false&width=90pc"></li>
+<li>Grant public-read access</li>
+<li>Choose I understand</li>
+<li>Choose Upload
+<img src="../../WorkShop2/05.break/5.4.remove/271.png?featherlight=false&width=90pc"></li>
+</ul>
+<ol start="13">
+<li>Test again with browser chat-app remove harded-code
+<img src="../../WorkShop2/05.break/5.4.remove/272.png?featherlight=false&width=90pc"></li>
+</ol>
 
 
 
@@ -2034,19 +2139,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1714842356"></script>
-    <script src="/js/perfect-scrollbar.min.js?1714842356"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1714842356"></script>
-    <script src="/js/jquery.sticky.js?1714842356"></script>
-    <script src="/js/featherlight.min.js?1714842356"></script>
-    <script src="/js/highlight.pack.js?1714842356"></script>
+    <script src="/js/clipboard.min.js?1714881306"></script>
+    <script src="/js/perfect-scrollbar.min.js?1714881306"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1714881306"></script>
+    <script src="/js/jquery.sticky.js?1714881306"></script>
+    <script src="/js/featherlight.min.js?1714881306"></script>
+    <script src="/js/highlight.pack.js?1714881306"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1714842356"></script>
-    <script src="/js/learn.js?1714842356"></script>
-    <script src="/js/hugo-learn.js?1714842356"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1714881306"></script>
+    <script src="/js/learn.js?1714881306"></script>
+    <script src="/js/hugo-learn.js?1714881306"></script>
 
-    <link href="/mermaid/mermaid.css?1714842356" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1714842356"></script>
+    <link href="/mermaid/mermaid.css?1714881306" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1714881306"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
