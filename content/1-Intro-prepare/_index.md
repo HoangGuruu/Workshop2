@@ -12,8 +12,10 @@ Our project is a chat application built on the AWS platform, combining technolog
 Next, we built an API using **Lambda** and **API Gateway** to manage dynamic data and user interactions. Using **DynamoDB** for data storage helps us build scalable and flexible applications. We also integrate user authentication and authorization by creating user pools in Cognito, ensuring security and efficient user management. 
 
 Finally, optimization with **CloudFront CDN** enhances application performance and reliability. Thanks to this combination, we have created a powerful, flexible and secure chat application that provides the best user experience.
+![](../../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
+![](../..WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
+![](../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
 ![](../../../../WorkShop2/01.intro-prepare/1.1.intro/01.png?featherlight=false&width=90pc)
-
 ## Contents
 
 - [Introduction](1.1-intro/)
